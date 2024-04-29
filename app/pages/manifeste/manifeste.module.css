@@ -1,0 +1,31 @@
+.zone-a {
+  grid-column-start: 8;
+  grid-column-end: 13;
+  grid-row-start: 1;
+  grid-row-end: 9;
+  background: red;
+}
+
+.zone-b {
+  grid-column-start: 1;
+  grid-column-end: 7;
+  grid-row-start: 3;
+  /* grid-row-end: 9; */
+  background: red;
+}
+
+.zone-c {
+  grid-column-start: 1;
+  grid-column-end: 7;
+  grid-row-start: 4;
+  grid-row-end: 7;
+  background: red;
+}
+
+.zone-d {
+  grid-column-start: 1;
+  grid-column-end: 7;
+  grid-row-start: 7;
+  grid-row-end: 8;
+  background: red;
+}
