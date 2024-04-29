@@ -1,4 +1,6 @@
 .quote {
+  font-family: "Source Serif 4", serif;
+  font-weight: 400;
   grid-column-start: 4;
   grid-column-end: 10;
   grid-row-start: 3;
@@ -10,6 +12,8 @@
 }
 
 .big-quote {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
   line-height: 50px;
   font-size: 80px;
   grid-column-start: 1;
@@ -27,19 +31,27 @@
   background-color: aqua;
 }
 .zone-f {
+  display: flex;
+  align-items: center;
   grid-column-start: 1;
-  grid-column-end: 2;
+  grid-column-end: 3;
   grid-row-start: 8;
   background-color: aqua;
 }
 
 .zone-g {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   grid-column-start: 6;
   grid-column-end: 8;
   grid-row-start: 8;
   background-color: aqua;
 }
 .zone-h {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
   grid-column-start: 9;
   grid-row-start: 8;
   background-color: aqua;

@@ -7,25 +7,31 @@
 }
 
 .zone-b {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
   grid-column-start: 1;
   grid-column-end: 7;
   grid-row-start: 3;
-  /* grid-row-end: 9; */
-  background: red;
 }
 
 .zone-c {
+  font-family: "Source Serif 4", serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.35rem;
   grid-column-start: 1;
   grid-column-end: 7;
   grid-row-start: 4;
   grid-row-end: 7;
-  background: red;
+  /* background: red; */
 }
 
 .zone-d {
+  font-family: "Inter", sans-serif;
   grid-column-start: 1;
   grid-column-end: 7;
   grid-row-start: 7;
   grid-row-end: 8;
-  background: red;
+  /* background: red; */
 }

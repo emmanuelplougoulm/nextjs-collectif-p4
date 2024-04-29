@@ -12,7 +12,7 @@ export default function Home() {
         Pour un théâtre en salle et ailleurs, pour tout le monde
       </div>
       <div className={styles["zone-e"]}>Image</div>
-      <div className={styles["zone-f"]}>text</div>
+      <div className={styles["zone-f"]}>@2024 - Collectif P4</div>
       <div className={styles["zone-g"]}>Image</div>
       <div className={styles["zone-h"]}>Image</div>
     </DefaultLayout>
