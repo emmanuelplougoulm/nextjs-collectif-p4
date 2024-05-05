@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "./header.module.css";
 
 export default function Header() {
@@ -5,14 +6,16 @@ export default function Header() {
     <header className={styles["header"]}>
       <nav className={styles.nav}>
         <ol>
-          <li>Manifeste</li>
-          <li>Membres</li>
-          <li>Actualités</li>
-          <li>Spectacles</li>
-          <li>Contact</li>
+          <Link href="/pages/manifeste">Manifeste</Link>
+          <Link href="/pages//membres">Membres</Link>
+          <Link href="/pages//actualites">Actualités</Link>
+          <Link href="/pages//spectacles">Spectacles</Link>
+          <Link href="/pages//contact">Contact</Link>
         </ol>
       </nav>
-      <div className={styles.logo}>COLLECTIF P4</div>
+      <div className={styles.logo}>
+        <Link href="/pages//landing">collectif p4</Link>
+      </div>
     </header>
   );
 }

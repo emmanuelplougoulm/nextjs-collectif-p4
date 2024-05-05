@@ -1,4 +1,6 @@
 import Image from "next/image";
+import Link from "next/link";
+
 import styles from "./styles/home.module.css";
 
 export default function Home() {
@@ -26,7 +28,9 @@ export default function Home() {
         <div className={styles["enter"]}>
           <div>
             <span className={styles["button"]}>icon</span>
-            <span className={styles["button"]}>ENTER</span>
+            <Link className={styles[""]} href="/pages/landing">
+              Entrer
+            </Link>
           </div>
         </div>
       </div>
