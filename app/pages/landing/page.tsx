@@ -5,33 +5,28 @@ import DefaultLayout from "../../layouts/DefaultLayout";
 import pic from "@/public/assets/webp/landing.webp";
 
 import Title from "../../components/title/title";
-import Container from "../../components/container/container";
-import TriangleIcon from "../../components/icons/triangle.svg";
+import Triangle from "../../components/icons/triangle.svg";
+import Circle from "../../components/icons/circle.svg";
 
 export default function Home() {
   return (
     <DefaultLayout>
       <div className={styles["page-container"]}>
-        <div className={styles["content-top"]}>
-          <Title tag="h2" className={styles["h2"]}>
+        <section className={styles["content-top"]}>
+          <Title tag="h2" className={styles["small-title"]}>
             <div>{`Collectif tout-terrain racontant des histoires avec un filtre`}</div>
             <div>{`de poésie, d'humour, de rage et de folie.`}</div>
           </Title>
-          <Image
-            src={TriangleIcon}
-            width={15}
-            height={15}
-            alt="triangle-icon"
-          />
-        </div>
+          <Image src={Triangle} width={15} height={15} alt="triangle-icon" />
+        </section>
 
-        <div className={styles["middle"]}>
-          <Title tag="h1" className="test">
-            <div className={styles["grid___big-quote"]}>
+        <section className={styles["content-middle"]}>
+          <div className={styles["large-title-container"]}>
+            <Title tag="h1" className={styles["large-title"]}>
               Pour un théâtre <br /> en salle et ailleurs,
               <br /> pour tout le monde
-            </div>
-          </Title>
+            </Title>
+          </div>
           <div className={styles["img-container"]}>
             <Image
               className={styles["shift-down"]}
@@ -41,13 +36,12 @@ export default function Home() {
               alt="group of people photo"
             />
           </div>
-        </div>
-        <div className={styles["bottom"]}>
-          <div className={styles["zone-f"]}>@2024 - Collectif P4</div>
-          <div className={styles["triangle-container"]}>
-            <div className={styles["circle"]} />
-          </div>
-        </div>
+        </section>
+
+        <section className={styles["content-bottom"]}>
+          <div className={styles["copyright"]}>@2024 - Collectif P4</div>
+          <Image src={Circle} width={15} height={15} alt="triangle-icon" />
+        </section>
       </div>
     </DefaultLayout>
   );
