@@ -1,20 +1,27 @@
-.zone-a {
-  grid-column-start: 1;
-  grid-column-end: 3;
-  grid-row-start: 2;
-  background: pink;
+.page-container {
+  display: flex;
+  flex: 1;
+  border: 1px violet solid;
 }
-.zone-b {
-  grid-column-start: 1;
-  grid-column-end: 4;
-  grid-row-start: 3;
-  grid-row-end: 5;
-  background: pink;
+
+.content-container {
+  display: flex;
+  background: violet;
+  flex: 2;
 }
-.zone-c {
-  grid-column-start: 5;
-  grid-column-end: 13;
-  grid-row-start: 3;
-  grid-row-end: 9;
+
+.list-container {
+  background: green;
+  flex: 1;
+}
+
+.section-title {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.shows-list {
   background: pink;
 }
