@@ -25,10 +25,11 @@ export default function news() {
         </section>
         <section className={styles["img-section"]}>
           <Image
-            className={styles["shift-down"]}
+            fill
+            priority
             src={pic}
-            layout="fill"
-            objectFit="cover"
+            style={{ objectFit: "cover" }}
+            className={styles["shift-down"]}
             alt="group of people photo"
           />
         </section>

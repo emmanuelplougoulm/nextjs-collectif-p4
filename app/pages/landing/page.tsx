@@ -30,11 +30,11 @@ export default function Home() {
           </Container>
           <Container className={styles["img-container"]}>
             <Image
-              className={styles["shift-down"]}
+              fill
               src={pic}
-              layout="fill"
-              objectFit="cover"
-              alt="group of people photo"
+              style={{ objectFit: "cover" }}
+              className={styles["shift-down"]}
+              alt="two_comedians_laughing"
             />
           </Container>
         </section>

@@ -44,10 +44,10 @@ export default function Contact() {
         </Container>
         <Container className={styles["img-content"]}>
           <Image
+            fill
+            style={{ objectFit: "cover" }}
             src={Picture}
-            layout="fill"
-            objectFit="cover"
-            alt="friends_photo"
+            alt="sea_photo"
           />
         </Container>
       </Container>

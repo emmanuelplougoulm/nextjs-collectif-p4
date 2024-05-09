@@ -60,10 +60,10 @@ export default function Membres() {
 
         <Container className={styles["img-container"]}>
           <Image
-            priority={true}
+            priority
+            fill
+            style={{ objectFit: "cover" }}
             src={`${BASE_LOAD_URL}${current.imageName}`}
-            layout="fill"
-            objectFit="cover"
             alt={current.name}
           />
         </Container>

@@ -18,9 +18,10 @@ export default function Home() {
       <div className={styles["page-container"]}>
         <section>
           <Image
+            priority
+            fill
             src={friendsPic}
-            layout="fill"
-            objectFit="cover"
+            style={{ objectFit: "cover" }}
             alt="friends_photo"
           />
         </section>
@@ -53,9 +54,10 @@ export default function Home() {
 
           <div className={styles["image-container"]}>
             <Image
+              fill
+              priority
               src={carPic}
-              layout="fill"
-              objectFit="cover"
+              style={{ objectFit: "cover" }}
               alt="Picture of the author"
             />
           </div>
