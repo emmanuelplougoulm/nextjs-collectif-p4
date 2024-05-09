@@ -1,6 +1,8 @@
 import Link from "next/link";
 import styles from "./header.module.css";
 
+import Title from "../title/title";
+
 export default function Header() {
   return (
     <header className={styles["header"]}>
@@ -13,6 +15,7 @@ export default function Header() {
           <Link href="/pages//contact">Contact</Link>
         </ol>
       </nav>
+
       <div className={styles.logo}>
         <Link href="/pages//landing">collectif p4</Link>
       </div>
