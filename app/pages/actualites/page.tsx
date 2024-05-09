@@ -1,14 +1,13 @@
 "use client";
-import styles from "./news.module.css";
-import config from "./config";
+import styles from "@/app/pages/actualites/news.module.css";
+import config from "@/app/pages/actualites/config";
 import pic from "@/public/assets/webp/laib-khaled.webp";
 
-import DefaultLayout from "../../layouts/DefaultLayout";
 import Image from "next/image";
-import Container from "../../components/container/container";
-import Title from "../../components/title/title";
-import News from "../../components/news/news";
-
+import DefaultLayout from "@/app/layouts/DefaultLayout";
+import Container from "@/app/components/container/container";
+import Title from "@/app/components/title/title";
+import News from "@/app/components/news/news";
 
 export default function news() {
   return (

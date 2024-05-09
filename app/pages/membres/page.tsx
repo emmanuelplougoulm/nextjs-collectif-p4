@@ -1,24 +1,20 @@
 "use client";
-import Image from "next/image";
-import DefaultLayout from "../../layouts/DefaultLayout";
-import List from "../../components/list/list";
-import Title from "../../components/title/title";
-import Container from "../../components/container/container";
-
-import config from "./config";
-import styles from "./membres.module.css";
-
+import styles from "@/app/pages/membres/membres.module.css";
+import config from "@/app/pages/membres/config";
 import { useState } from "react";
 
-// choose type over interface here
-// interface are meant to be extended
+import Image from "next/image";
+import DefaultLayout from "@/app/layouts/DefaultLayout";
+import List from "@/app/components/list/list";
+import Title from "@/app/components/title/title";
+import Container from "@/app/components/container/container";
 
-interface Membre {
+type Membre = {
   name: string;
   position: string[];
   cie: string[];
   imageName: string;
-}
+};
 
 export default function Membres() {
   const [current, setCurrent] = useState<Membre>(config[0]);

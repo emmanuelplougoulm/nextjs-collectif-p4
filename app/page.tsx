@@ -1,9 +1,10 @@
+import styles from "@/app/styles/home.module.css";
+
 import Image from "next/image";
 import Link from "next/link";
 
-import styles from "./styles/home.module.css";
-import friendsPic from "../public/assets/webp/motoki.webp";
-import carPic from "../public/assets/webp/remi.webp";
+import friendsPic from "@/public/assets/webp/motoki.webp";
+import carPic from "@/public/assets/webp/remi.webp";
 
 import TriangleIcon from "@/app/components/icons/triangle.svg";
 import CircleIcon from "@/app/components/icons/circle.svg";

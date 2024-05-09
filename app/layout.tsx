@@ -1,5 +1,5 @@
-import "./styles/globals.css";
-import "./styles/reset.css";
+import "@/app/styles/globals.css";
+import "@/app/styles/reset.css";
 
 export default function RootLayout({
   children,

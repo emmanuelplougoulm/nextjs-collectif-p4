@@ -1,11 +1,11 @@
+import styles from "@/app/pages/manifeste/manifeste.module.css";
+
+import DefaultLayout from "@/app/layouts/DefaultLayout";
 import Image from "next/image";
-import Title from "../../components/title/title";
-import Container from "../../components/container/container";
+import Title from "@/app/components/title/title";
+import Container from "@/app/components/container/container";
+import TriangleIcon from "@/app/components/icons/triangle.svg";
 
-import TriangleIcon from "../../components/icons/triangle.svg";
-
-import styles from "./manifeste.module.css";
-import DefaultLayout from "../../layouts/DefaultLayout";
 import manifestePic from "@/public/assets/webp/manifeste.webp";
 
 export default function Manifesto() {

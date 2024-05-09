@@ -1,12 +1,12 @@
 "use client";
-import styles from "./contact.module.css";
+import styles from "@/app/pages/contact/contact.module.css";
 
 import Image from "next/image";
-import DefaultLayout from "../../layouts/DefaultLayout";
-import Title from "../../components/title/title";
-import Container from "../../components/container/container";
+import DefaultLayout from "@/app/layouts/DefaultLayout";
+import Title from "@/app/components/title/title";
+import Container from "@/app/components/container/container";
 
-import Picture from "../../../public/assets/webp/contact-2.webp";
+import Picture from "@/public/assets/webp/contact-2.webp";
 
 export default function Contact() {
   return (

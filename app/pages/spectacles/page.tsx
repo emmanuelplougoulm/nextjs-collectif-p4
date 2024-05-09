@@ -1,9 +1,9 @@
 "use client";
-import styles from "./spectacles.module.css";
-import DefaultLayout from "../../layouts/DefaultLayout";
-import config from "./config";
-
+import styles from "@/app/pages/spectacles/spectacles.module.css";
+import config from "@/app/pages/spectacles/config";
 import { useState } from "react";
+
+import DefaultLayout from "@/app/layouts/DefaultLayout";
 
 export default function Spectacles() {
   const [current, setCurrent] = useState(config[0]);
