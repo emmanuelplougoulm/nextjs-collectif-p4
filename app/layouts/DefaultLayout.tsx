@@ -7,7 +7,7 @@ export default function Defaultlayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className={`${styles["grid-container"]}`}>
+    <div className={`${styles["layout-container"]}`}>
       <Header />
       {children}
     </div>
