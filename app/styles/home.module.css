@@ -3,98 +3,117 @@
   display: flex;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(8, 1fr);
-  grid-column-gap: 0.625rem;
-  grid-row-gap: 0.625rem;
+.page-container {
+  width: 100vw;
+  display: flex;
 }
 
-.grid__friends-pic {
+.page-container section {
   position: relative;
-  grid-column-start: 1;
-  grid-column-end: 5;
-  grid-row-start: 1;
-  grid-row-end: 9;
+  flex: 1;
 }
 
-.grid__cities-container {
-  grid-column-start: 10;
-  grid-row-start: 2;
-  font-size: 1rem;
-  font-style: italic;
+.top-item-container {
+  height: 3.125rem;
 }
 
-.grid__title-container {
-  grid-column-start: 6;
-  grid-column-end: 8;
-  grid-row-start: 4;
-  grid-row-end: 6;
+.top-item-container ul {
+  padding: 0;
 }
 
-.grid__title-container h1 {
+.top-item-container ul li {
+  list-style-type: none;
+}
+
+.page-container section:nth-child(2),
+.page-container section:nth-child(3) {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 4.0625rem 0 4.0625rem 5.3125rem;
+}
+
+.image-container {
+  position: relative;
+}
+
+.image-container img {
+  transform: scaleX(-1);
+}
+
+.title-box,
+.image-container {
+  height: 15.625rem;
+}
+
+.title-box h1 {
   font-family: "Inter", sans-serif;
   font-weight: 700;
-  font-size: 1.8rem;
+  font-size: 28.8px;
   text-transform: uppercase;
   white-space: nowrap;
   margin: 0;
 }
 
-.grid__title-container h2 {
+.title-box h2 {
   font-family: "Source Serif 4", serif;
   font-style: italic;
   font-weight: 400;
-  font-size: 1rem;
-  max-width: 4.375rem;
-  margin: 0.25rem 0 0 0;
+  font-size: 16px;
+  max-width: 70px;
+  margin: 4px 0 0 0;
 }
 
-.grid__car-pic {
-  position: relative;
-  transform: scaleX(-1);
-  grid-column-start: 10;
-  grid-column-end: 13;
-  grid-row-start: 4;
-  grid-row-end: 7;
-}
-
-.grid__menu {
-  grid-column-start: 10;
-  grid-row-start: 7;
-  display: flex;
-  align-items: flex-end;
-}
-
-.grid__menu a {
+.page-container a {
   cursor: pointer;
   font-family: "Inter", sans-serif;
   font-weight: 700;
-  margin-left: 10px;
+  margin-left: 0.625rem;
   color: inherit;
   text-decoration: none;
 }
 
-.grid__menu a a:hover {
+.page-container a a:hover {
   text-decoration: underline;
 }
 
-.arrow-icon-one {
-  grid-column-start: 6;
-  grid-row-start: 2;
-  display: flex;
-}
+@media screen and (max-width: 768px) {
+  .page-container {
+    flex-direction: column;
+  }
 
-.circle-icon {
-  grid-column-start: 6;
-  grid-row-start: 7;
-  display: flex;
-  align-items: flex-end;
+  .page-container section:first-child {
+    display: none;
+  }
+
+  .page-container section:nth-child(2),
+  .page-container section:nth-child(3) {
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .title-box,
+  .image-container {
+    height: 100px;
+  }
+
+  /* 
+  .top-item-container {
+    display: none;
+  } */
 }
 
 @media screen and (max-width: 480px) {
-  .grid__car-pic {
+  /* .page-container > section:first-child {
     display: none;
   }
+
+  .page-container section:nth-child(2),
+  .page-container section:nth-child(3) {
+    justify-content: center;
+    align-items: center;
+    padding: 0rem;
+  } */
 }

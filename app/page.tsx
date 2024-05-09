@@ -2,17 +2,20 @@ import Image from "next/image";
 import Link from "next/link";
 
 import styles from "./styles/home.module.css";
-import friendsPic from "@/public/assets/webp/motoki.webp";
-import carPic from "@/public/assets/webp/remi.webp";
+import friendsPic from "../public/assets/webp/motoki.webp";
+import carPic from "../public/assets/webp/remi.webp";
 
-import TriangleIcon from "@/public/assets/icons/triangle.svg";
-import CircleIcon from "@/public/assets/icons/circle.svg";
+import TriangleIcon from "../public/assets/icons/triangle.svg";
+import CircleIcon from "../public/assets/icons/circle.svg";
+
+// add a "collective" title component - extract it from page
+// add a TITLE component that you will use for every titles
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <div className={styles["grid"]}>
-        <section className={styles["grid__friends-pic"]}>
+      <div className={styles["page-container"]}>
+        <section>
           <Image
             src={friendsPic}
             layout="fill"
@@ -20,55 +23,54 @@ export default function Home() {
             alt="friends_photo"
           />
         </section>
-
-        <aside className={styles["grid__cities-container"]}>
-          <div>Paris</div>
-          <div>St-Étienne</div>
-          <div>Marseille</div>
-        </aside>
-
-        <div className={styles["arrow-icon-one"]}>
-          <Image
-            src={TriangleIcon}
-            width={15}
-            height={15}
-            alt="triangle-icon"
-          />
-        </div>
-
-        <section className={styles["grid__title-container"]}>
-          <h1>collectif p4</h1>
-          <h2>Collectif joyeusement foutraque</h2>
+        <section>
+          <span className={styles["top-item-container"]}>
+            <Image
+              src={TriangleIcon}
+              width={15}
+              height={15}
+              alt="triangle-icon"
+            />
+          </span>
+          <div className={styles["title-box"]}>
+            <h1>collectif p4</h1>
+            <h2>collectif joyeusement foutraque</h2>
+          </div>
+          <span>
+            <Image src={CircleIcon} width={15} height={15} alt="circle_icon" />
+          </span>
         </section>
 
-        <div className={styles["circle-icon"]}>
-          <Image
-            src={CircleIcon}
-            width={15}
-            height={15}
-            alt="group of people photo"
-          />
-        </div>
+        <section>
+          <aside className={styles["top-item-container"]}>
+            <ul>
+              <li>Paris</li>
+              <li>St-Étienne</li>
+              <li>Marseille</li>
+            </ul>
+          </aside>
 
-        <div className={styles["grid__car-pic"]}>
-          <Image
-            src={carPic}
-            layout="fill"
-            objectFit="cover"
-            alt="Picture of the author"
-          />
-        </div>
-        <div className={styles["grid__menu"]}>
-          <Image
-            src={TriangleIcon}
-            width={15}
-            height={15}
-            alt="triangle_icon"
-          />
-          <Link className={styles["enter-button"]} href="/pages/landing">
-            Entrer
-          </Link>
-        </div>
+          <div className={styles["image-container"]}>
+            <Image
+              src={carPic}
+              layout="fill"
+              objectFit="cover"
+              alt="Picture of the author"
+            />
+          </div>
+
+          <div>
+            <Image
+              src={TriangleIcon}
+              width={15}
+              height={15}
+              alt="triangle_icon"
+            />
+            <Link className={styles["enter-button"]} href="/pages/landing">
+              Entrer
+            </Link>
+          </div>
+        </section>
       </div>
     </main>
   );
