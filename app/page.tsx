@@ -5,8 +5,8 @@ import styles from "./styles/home.module.css";
 import friendsPic from "../public/assets/webp/motoki.webp";
 import carPic from "../public/assets/webp/remi.webp";
 
-import TriangleIcon from "../public/assets/icons/triangle.svg";
-import CircleIcon from "../public/assets/icons/circle.svg";
+import TriangleIcon from "@/app/components/icons/triangle.svg";
+import CircleIcon from "@/app/components/icons/circle.svg";
 
 // add a "collective" title component - extract it from page
 // add a TITLE component that you will use for every titles
