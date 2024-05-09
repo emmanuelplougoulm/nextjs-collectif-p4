@@ -1,0 +1,51 @@
+.page-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  /* border: 1px violet solid; */
+  /* background: pink; */
+}
+
+.text-section {
+  flex: 1;
+  /* background: lightgreen; */
+  display: flex;
+  flex-direction: column;
+  padding: 70px 0 0 30px;
+}
+
+.news-container {
+  display: flex;
+  gap: 70px;
+}
+
+.img-section {
+  flex: 1.5;
+  background: lightskyblue;
+  position: relative;
+}
+
+.section-title {
+  align-items: center;
+  font-family: "Inter", sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 35px;
+}
+
+@media screen and (max-width: 768px) {
+  .page-container {
+    flex-direction: column-reverse;
+  }
+
+  .text-section {
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .page-container {
+    flex-direction: column-reverse;
+  }
+}
