@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Title from "../../components/title/title";
+import Container from "../../components/container/container";
+
 import TriangleIcon from "../../components/icons/triangle.svg";
 
 import styles from "./manifeste.module.css";
@@ -9,9 +11,9 @@ import manifestePic from "@/public/assets/webp/manifeste.webp";
 export default function Manifesto() {
   return (
     <DefaultLayout>
-      <div className={styles["page-container"]}>
-        <div className={styles["text-content"]}>
-          <div className={styles["title-container"]}>
+      <Container className={styles["page-container"]}>
+        <section className={styles["text-content"]}>
+          <Container className={styles["title-container"]}>
             <Title tag="h3" className={styles["h3"]}>
               manifeste
             </Title>
@@ -21,7 +23,7 @@ export default function Manifesto() {
               height={15}
               alt="triangle-icon"
             />
-          </div>
+          </Container>
 
           <div className={styles["paragraph"]}>
             {`P4 pour un paquet de cigarette oublié sur le bitume renfermant un mot
@@ -42,16 +44,16 @@ export default function Manifesto() {
         porteurs de la totalité des signes du spectacle"`}
             <div>A. Vittez</div>
           </div>
-        </div>
-        <div className={styles["img-content"]}>
+        </section>
+        <section className={styles["img-content"]}>
           <Image
             src={manifestePic}
             layout="fill"
             objectFit="cover"
             alt="lightbeams_trees"
           />
-        </div>
-      </div>
+        </section>
+      </Container>
     </DefaultLayout>
   );
 }

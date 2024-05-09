@@ -5,7 +5,6 @@
 
 .text-content {
   flex: 2;
-  /* background: pink; */
   display: flex;
   flex-direction: column;
   padding-left: 30px;
@@ -13,7 +12,6 @@
 }
 
 .title-container {
-  background: lightblue;
   margin-top: 75px;
   display: flex;
   justify-content: space-between;
@@ -46,5 +44,31 @@
   grid-column-end: 7;
   grid-row-start: 7;
   grid-row-end: 8;
-  /* background: red; */
+}
+
+@media screen and (max-width: 768px) {
+}
+
+@media screen and (max-width: 480px) {
+  .page-container {
+    flex-direction: column-reverse;
+  }
+
+  .title-container {
+    margin-top: 15px;
+  }
+
+  .title-container img {
+    display: none;
+  }
+
+  .text-content {
+    flex: 1;
+    padding: 0 1rem;
+  }
+
+  .img-content {
+    flex: 1;
+    height: 300px;
+  }
 }
