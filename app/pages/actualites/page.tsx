@@ -14,7 +14,7 @@ export default function news() {
     <DefaultLayout>
       <Container className={styles["page-container"]}>
         <section className={styles["text-section"]}>
-          <Title tag="h3" className={styles["section-title"]}>
+          <Title tag="h3" className="section-title">
             Actualités
           </Title>
           <Container className={styles["news-container"]}>

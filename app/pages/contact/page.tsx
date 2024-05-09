@@ -12,9 +12,11 @@ export default function Contact() {
   return (
     <DefaultLayout>
       <Container className={styles["page-container"]}>
-        <Title tag="h3" className={styles["title"]}>
-          contact
-        </Title>
+        <Container className={styles["title-container"]}>
+          <Title tag="h3" className="section-title">
+            contact
+          </Title>
+        </Container>
         <Container className={styles["contacts-container"]}>
           <div>
             <Title tag="h4" className={styles["contact-title"]}>

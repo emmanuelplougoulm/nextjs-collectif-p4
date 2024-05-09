@@ -14,7 +14,7 @@ export default function Manifesto() {
       <Container className={styles["page-container"]}>
         <section className={styles["text-content"]}>
           <Container className={styles["title-container"]}>
-            <Title tag="h3" className={styles["h3"]}>
+            <Title tag="h3" className="section-title">
               manifeste
             </Title>
             <Image
@@ -48,8 +48,8 @@ export default function Manifesto() {
         <section className={styles["img-content"]}>
           <Image
             src={manifestePic}
-            layout="fill"
-            objectFit="cover"
+            fill
+            style={{ objectFit: "cover" }}
             alt="lightbeams_trees"
           />
         </section>
