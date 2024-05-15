@@ -7,6 +7,7 @@ import Title from "@/app/components/title/title";
 import Container from "@/app/components/container/container";
 
 import Picture from "@/public/assets/webp/contact-2.webp";
+import text from "@/locales/fr/all.json";
 
 export default function Contact() {
   return (
@@ -14,7 +15,7 @@ export default function Contact() {
       <Container className={styles["page-container"]}>
         <Container className={styles["title-container"]}>
           <Title tag="h3" className="section-title">
-            contact
+            {text.contact.title}
           </Title>
         </Container>
         <Container className={styles["contacts-container"]}>

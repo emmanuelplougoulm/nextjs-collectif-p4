@@ -9,13 +9,15 @@ import Container from "@/app/components/container/container";
 import Title from "@/app/components/title/title";
 import News from "@/app/components/news/news";
 
+import text from "@/locales/fr/all.json";
+
 export default function news() {
   return (
     <DefaultLayout>
       <Container className={styles["page-container"]}>
         <section className={styles["text-section"]}>
           <Title tag="h3" className="section-title">
-            Actualités
+            {text.spectacles.title}
           </Title>
           <Container className={styles["news-container"]}>
             {config.map((item, index) => (

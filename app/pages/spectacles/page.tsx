@@ -4,6 +4,7 @@ import config from "@/app/pages/spectacles/config";
 import { useState } from "react";
 
 import DefaultLayout from "@/app/layouts/DefaultLayout";
+import text from "@/locales/fr/all.json";
 
 export default function Spectacles() {
   const [current, setCurrent] = useState(config[0]);
@@ -17,7 +18,7 @@ export default function Spectacles() {
       <div className={styles["page-container"]}>
         <div className={styles["list-container"]}>
           <div className={styles["section-title-container"]}>
-            <div className="section-title">spectacles</div>
+            <div className="section-title"> {text.spectacles.title}</div>
           </div>
           <div className={styles["shows-list"]}>
             <ul>

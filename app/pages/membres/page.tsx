@@ -9,6 +9,8 @@ import List from "@/app/components/list/list";
 import Title from "@/app/components/title/title";
 import Container from "@/app/components/container/container";
 
+import text from "@/locales/fr/all.json";
+
 type Membre = {
   name: string;
   position: string[];
@@ -31,7 +33,7 @@ export default function Membres() {
       <Container className={styles["page-container"]}>
         <section className={styles["text-section"]}>
           <Title tag="h3" className={styles["section-title"]}>
-            membres
+            {text.membres.title}
           </Title>
 
           <Container className={styles["lists-container"]}>

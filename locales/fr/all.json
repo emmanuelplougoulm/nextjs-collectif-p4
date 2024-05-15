@@ -1,5 +1,31 @@
 {
+  "collectiveName": "collectif p4",
+  "home": {
+    "collectiveQuote": "collectif joyeusement foutraque",
+    "collectiveCities": ["Paris", "St-Étienne", "Marseille"]
+  },
   "landing": {
     "smallTitle": "Collectif tout-terrain racontant des histoires avec un filtre\u000Ade poésie, d'humour, de rage et de folie."
+  },
+  "manifeste": {
+    "title": "Manifeste",
+    "paragraph": "P4 pour un paquet de cigarette oublié sur le bitume renfermant un mot d’amour, pour un laboratoire de recherche sur la liberté. Pour ne jamais avoir à chanter « tiens, voilà du boudin ». C’est une quête de lumière. C’est rouler en vieille décapotable en faisant l'avion avec ton bras . C’est aussi croire en l'esprit de camaraderie et à la confrontation d'idées. C’est dedans et dehors, pour vous et pour nous. C’est raconter des histoires, hors des sentiers rebattus, avec générosité et appétit pour le jeu.",
+    "quote": "Le fossé entre le théâtre pauvre et le théâtre riche est encore élargi, la classe moyenne du théâtre disparaît, un peu d’argent ne suffit plus, il en faut beaucoup ou alors, quoi, rien. Il faut trouver l’esthétique de ce rien. Qui n’est pas du tout rien, puisqu’il y a les acteurs,porteurs de la totalité des signes du spectacle",
+    "quoteAuthor": "A. Vittez"
+  },
+  "membres": {
+    "title": "Membres"
+  },
+  "news": {
+    "title": "Actualités"
+  },
+  "spectacles": {
+    "title": "Spectacles"
+  },
+  "contact": {
+    "title": "Contact"
+  },
+  "actions": {
+    "enter": "Enter"
   }
 }
