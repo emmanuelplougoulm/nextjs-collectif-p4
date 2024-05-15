@@ -8,7 +8,7 @@ import TriangleIcon from "@/app/components/icons/triangle.svg";
 
 import manifestePic from "@/public/assets/webp/manifeste.webp";
 
-export default function Manifesto() {
+export default function Manifeste() {
   return (
     <DefaultLayout>
       <Container className={styles["page-container"]}>
