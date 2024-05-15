@@ -34,8 +34,8 @@ export default function Contact() {
             <Title tag="h4" className={styles["contact-title"]}>
               Téléphone
             </Title>
-            <span>Arthur Viadieu: 06 99 90 04 74</span>
-            <span>Bob Levasseur: 07 69 18 94 49</span>
+            <div>Arthur Viadieu: 06 99 90 04 74</div>
+            <div>Bob Levasseur: 07 69 18 94 49</div>
           </div>
           <div>
             <Title tag="h4" className={styles["contact-title"]}>
@@ -47,7 +47,7 @@ export default function Contact() {
         <Container className={styles["img-content"]}>
           <Image
             fill
-            style={{ objectFit: "cover" }}
+            style={{ objectFit: "contain" }}
             src={Picture}
             alt="sea_photo"
           />

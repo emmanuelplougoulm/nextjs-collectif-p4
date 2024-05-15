@@ -7,24 +7,23 @@
 }
 
 .title-container {
-  margin-bottom: 35px;
+  margin-bottom: 20px;
   display: flex;
   justify-content: center;
-  margin-top: var(--section-title-top-spacing);
+  margin-top: 60px;
 }
 
 .contact-title {
   font-family: "Source Serif 4", serif;
   font-style: italic;
   font-weight: 400;
-  font-size: 48px;
+  font-size: 36px;
   margin-bottom: 12px;
 }
 
 .contacts-container {
   display: flex;
   justify-content: space-between;
-  padding: 0 8rem;
   text-align: center;
 }
 
@@ -42,6 +41,13 @@
   .page-container {
     flex-direction: column;
     padding: 16px;
+  }
+
+  .img-content {
+    height: 100%;
+  }
+  .img-content img {
+    height: 100%;
   }
 
   .contacts-container {
