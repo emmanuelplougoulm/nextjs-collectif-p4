@@ -12,7 +12,7 @@
 }
 
 .title-container {
-  margin-top: 75px;
+  margin-top: var(--section-title-top-spacing);
   display: flex;
   justify-content: space-between;
 }

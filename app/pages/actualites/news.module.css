@@ -11,7 +11,8 @@
   /* background: lightgreen; */
   display: flex;
   flex-direction: column;
-  padding: 70px 0 0 30px;
+  padding: 0 0 0 30px;
+  margin-top: var(--section-title-top-spacing);
 }
 
 .news-container {

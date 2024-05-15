@@ -16,7 +16,9 @@ export default function Spectacles() {
     <DefaultLayout>
       <div className={styles["page-container"]}>
         <div className={styles["list-container"]}>
-          <div className="section-title">spectacles</div>
+          <div className={styles["section-title-container"]}>
+            <div className="section-title">spectacles</div>
+          </div>
           <div className={styles["shows-list"]}>
             <ul>
               <li onMouseEnter={handleMouseEnter}>

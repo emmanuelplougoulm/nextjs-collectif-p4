@@ -4,6 +4,10 @@
   border: 1px violet solid;
 }
 
+.section-title-container {
+  margin-top: var(--section-title-top-spacing);
+}
+
 .content-container {
   display: flex;
   background: violet;
