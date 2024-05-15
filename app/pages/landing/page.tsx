@@ -7,7 +7,7 @@ import pic from "@/public/assets/webp/landing.webp";
 import Container from "../../components/container/container";
 import Title from "../../components/title/title";
 import Triangle from "../../components/icons/triangle.svg";
-import Circle from "../../components/icons/circle.svg";
+// import Circle from "../../components/icons/circle.svg";
 
 export default function Home() {
   return (
@@ -41,7 +41,9 @@ export default function Home() {
 
         <section className={styles["content-bottom"]}>
           <div className={styles["copyright"]}>@2024 - Collectif P4</div>
-          <Image src={Circle} width={15} height={15} alt="triangle-icon" />
+          {/* <div className={styles["img-container"]}>
+            <Image src={Circle} width={15} height={15} alt="triangle-icon" />
+          </div> */}
         </section>
       </Container>
     </DefaultLayout>
