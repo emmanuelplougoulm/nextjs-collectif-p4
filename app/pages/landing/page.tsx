@@ -7,9 +7,8 @@ import pic from "@/public/assets/webp/landing.webp";
 import Container from "../../components/container/container";
 import Title from "../../components/title/title";
 import Triangle from "../../components/icons/triangle.svg";
-// import Circle from "../../components/icons/circle.svg";
 
-export default function Home() {
+export default function Landing() {
   return (
     <DefaultLayout>
       <Container className={styles["page-container"]}>
@@ -20,7 +19,6 @@ export default function Home() {
           </Title>
           <Image src={Triangle} width={15} height={15} alt="triangle-icon" />
         </section>
-
         <section className={styles["content-middle"]}>
           <Container className={styles["large-title-container"]}>
             <Title tag="h1" className={styles["large-title"]}>
@@ -38,7 +36,6 @@ export default function Home() {
             />
           </Container>
         </section>
-
         <section className={styles["content-bottom"]}>
           <div className={styles["copyright"]}>@2024 - Collectif P4</div>
           {/* <div className={styles["img-container"]}>

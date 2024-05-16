@@ -1,0 +1,36 @@
+.nav {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.nav ol {
+  margin: 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+
+  font-family: "Inter", sans-serif;
+  font-weight: 900;
+  font-size: 1rem;
+}
+
+.nav ol a {
+  font-family: "Inter", sans-serif;
+  font-weight: 900;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.nav ol a:not(:first-child) {
+  margin-left: 20px;
+}
+
+@media screen and (max-width: 768px) {
+}
+
+@media screen and (max-width: 480px) {
+}

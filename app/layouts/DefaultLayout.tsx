@@ -1,5 +1,8 @@
 import styles from "./default-layout.module.css";
+
 import Header from "@/app/components/header/header";
+import Container from "@/app/components/container/container";
+import BurgerMenu from "@/app/components/burgerMenu/burgerMenu";
 
 export default function Defaultlayout({
   children,
@@ -7,9 +10,12 @@ export default function Defaultlayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className={`${styles["layout-container"]}`}>
-      <Header />
+    <Container className={`${styles["layout-container"]}`}>
+      <BurgerMenu />
+      <Container className={`${styles["header-container"]}`}>
+        <Header />
+      </Container>
       {children}
-    </div>
+    </Container>
   );
 }
