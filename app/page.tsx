@@ -6,16 +6,19 @@ import Link from "next/link";
 import friendsPic from "@/public/assets/webp/motoki.webp";
 import carPic from "@/public/assets/webp/remi.webp";
 
+import Title from "@/app/components/title/title";
+import List from "@/app/components/list/list";
+import Container from "@/app/components/container/container";
+
 import TriangleIcon from "@/app/components/icons/triangle.svg";
 import CircleIcon from "@/app/components/icons/circle.svg";
 
-// add a "collective" title component - extract it from page
-// add a TITLE component that you will use for every titles
+import text from "@/locales/fr/all.json";
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <div className={styles["page-container"]}>
+      <Container className={styles["page-container"]}>
         <section>
           <Image
             priority
@@ -28,6 +31,7 @@ export default function Home() {
         <section>
           <span className={styles["top-item-container"]}>
             <Image
+              className={styles["top-triangle"]}
               src={TriangleIcon}
               width={15}
               height={15}
@@ -35,8 +39,11 @@ export default function Home() {
             />
           </span>
           <div className={styles["title-box"]}>
-            <h1>collectif p4</h1>
-            <h2>collectif joyeusement foutraque</h2>
+            <Title tag="h1" className="section-title">
+              {text.collectiveName}
+            </Title>
+            <Title tag="h2">{text.home.collectiveQuote}</Title>
+            {/* <h2></h2> */}
           </div>
           <span>
             <Image src={CircleIcon} width={15} height={15} alt="circle_icon" />
@@ -45,11 +52,11 @@ export default function Home() {
 
         <section>
           <aside className={styles["top-item-container"]}>
-            <ul>
-              <li>Paris</li>
-              <li>St-Étienne</li>
-              <li>Marseille</li>
-            </ul>
+            <List>
+              {text.home.collectiveCities.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </List>
           </aside>
 
           <div className={styles["image-container"]}>
@@ -58,7 +65,7 @@ export default function Home() {
               priority
               src={carPic}
               style={{ objectFit: "cover" }}
-              alt="Picture of the author"
+              alt="picture_of_a_car"
             />
           </div>
 
@@ -70,11 +77,20 @@ export default function Home() {
               alt="triangle_icon"
             />
             <Link className={styles["enter-button"]} href="/pages/landing">
-              Entrer
+              {text.actions.enter}
             </Link>
           </div>
         </section>
-      </div>
+      </Container>
+      <Container className={styles["mobile-container"]}>
+        <Title tag="h1" className="section-title">
+          {text.collectiveName}
+        </Title>
+        <Link className={styles["enter-button"]} href="/pages/landing">
+          {text.actions.enter}
+        </Link>
+        <div className={styles["mobile-menu-container"]}></div>
+      </Container>
     </main>
   );
 }
