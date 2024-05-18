@@ -31,11 +31,28 @@ const config = [
         url: "https://lasouriscene.fr/theatre/jaurais-voulu-etre-jeff-bezos-2/",
       },
     ],
-    demoUrl: "https://www.youtube.com/watch?v=MPLQDtOdZZ8",
-    images: [""],
+    demoUrl: "https://www.youtube.com/embed/MPLQDtOdZZ8?si=xBH-ZXMTi45olKR3",
+    images: [
+      "/assets/webp/spectacles/bezos/1.webp",
+      "/assets/webp/spectacles/bezos/2.webp",
+      "/assets/webp/spectacles/bezos/2.webp",
+      "/assets/webp/spectacles/bezos/3.webp",
+      "/assets/webp/spectacles/bezos/4.webp",
+      "/assets/webp/spectacles/bezos/5.webp",
+      "/assets/webp/spectacles/bezos/6.webp",
+      "/assets/webp/spectacles/bezos/7.webp",
+      "/assets/webp/spectacles/bezos/8.webp",
+      "/assets/webp/spectacles/bezos/9.webp",
+      "/assets/webp/spectacles/bezos/10.webp",
+      "/assets/webp/spectacles/bezos/11.webp",
+      "/assets/webp/spectacles/bezos/12.webp",
+      "/assets/webp/spectacles/bezos/13.webp",
+      "/assets/webp/spectacles/bezos/14.webp",
+      "/assets/webp/spectacles/bezos/15.webp",
+    ],
   },
   {
-    name: "LE DERNIER FERME LA PORTE",
+    name: "Le dernier ferme la porte",
     place: "Le couvent Levat – Spectacle joué à Marseille",
     date: "Août 2021",
     description:
@@ -44,7 +61,7 @@ const config = [
     images: [""],
   },
   {
-    name: "SEULE LA QUEUE DU CASTOR PEUT TARIR LA RIVIÈRE",
+    name: "Seule la queue du castor peut tarir la rivière",
     place: "CREATION COLLECTIVE IN SITU ET IMMERSIVE",
     date: "Juillet 2020",
     description:
@@ -53,7 +70,7 @@ const config = [
     images: [""],
   },
   {
-    name: "MA SOEUR, TES LÈVRES SONT DE PORCELAINE",
+    name: "Ma soeur, tes lèvres sont de porcelaine",
     place: ["Marseille (2019)", "Paris 11e (2018)"],
     date: "Juillet 2020",
     description:
