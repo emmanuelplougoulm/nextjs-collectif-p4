@@ -5,8 +5,8 @@ import pic from "@/public/assets/webp/laib-khaled.webp";
 
 import Image from "next/image";
 import DefaultLayout from "@/app/layouts/DefaultLayout";
-import Container from "@/app/components/container/container";
-import Title from "@/app/components/title/title";
+import Container from "@/app/components/shared/container/container";
+import Title from "@/app/components/shared/title/title";
 import News from "@/app/components/news/news";
 
 import text from "@/locales/fr/all.json";

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import styles from "./header.module.css";
 
-import Title from "@/app/components/title/title";
+import Title from "@/app/components/shared/title/title";
 import Nav from "@/app/components/nav/nav";
 
 export default function Header() {

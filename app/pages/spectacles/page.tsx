@@ -4,6 +4,8 @@ import config from "@/app/pages/spectacles/config";
 import { useState } from "react";
 
 import DefaultLayout from "@/app/layouts/DefaultLayout";
+import List from "@/app/components/shared/list/list";
+import Container from "@/app/components/shared/container/container";
 import text from "@/locales/fr/all.json";
 
 export default function Spectacles() {

@@ -3,8 +3,8 @@ import styles from "@/app/pages/contact/contact.module.css";
 
 import Image from "next/image";
 import DefaultLayout from "@/app/layouts/DefaultLayout";
-import Title from "@/app/components/title/title";
-import Container from "@/app/components/container/container";
+import Title from "@/app/components/shared/title/title";
+import Container from "@/app/components/shared/container/container";
 
 import Picture from "@/public/assets/webp/contact-2.webp";
 import text from "@/locales/fr/all.json";

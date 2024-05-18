@@ -1,7 +1,7 @@
 import styles from "./default-layout.module.css";
 
 import Header from "@/app/components/header/header";
-import Container from "@/app/components/container/container";
+import Container from "@/app/components/shared/container/container";
 import BurgerMenu from "@/app/components/burgerMenu/burgerMenu";
 
 export default function Defaultlayout({

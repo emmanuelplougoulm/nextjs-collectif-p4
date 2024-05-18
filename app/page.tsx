@@ -6,9 +6,9 @@ import Link from "next/link";
 import friendsPic from "@/public/assets/webp/motoki.webp";
 import carPic from "@/public/assets/webp/remi.webp";
 
-import Title from "@/app/components/title/title";
-import List from "@/app/components/list/list";
-import Container from "@/app/components/container/container";
+import Title from "@/app/components/shared/title/title";
+import List from "@/app/components/shared/list/list";
+import Container from "@/app/components/shared/container/container";
 
 import TriangleIcon from "@/app/components/icons/triangle.svg";
 import CircleIcon from "@/app/components/icons/circle.svg";

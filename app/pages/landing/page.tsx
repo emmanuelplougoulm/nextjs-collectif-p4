@@ -4,8 +4,8 @@ import styles from "./landing.module.css";
 import DefaultLayout from "../../layouts/DefaultLayout";
 import pic from "@/public/assets/webp/landing.webp";
 
-import Container from "../../components/container/container";
-import Title from "../../components/title/title";
+import Container from "../../components/shared/container/container";
+import Title from "../../components/shared/title/title";
 import Triangle from "../../components/icons/triangle.svg";
 
 export default function Landing() {
