@@ -8,17 +8,22 @@
   display: flex;
   flex-direction: column;
   padding-left: 30px;
-  padding-right: 80px;
+  padding-right: 150px;
+  border: 1px violet solid;
+  /* padding-top: 170px; */
 }
 
 .title-container {
   margin-top: var(--section-title-top-spacing);
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  align-items: center;
+  /* border: 1px green solid; */
 }
 
 .title-container img {
   transform: rotate(90deg);
+  margin-left: 20px;
 }
 
 .img-content {
@@ -35,7 +40,8 @@
   font-family: "Source Serif 4", serif;
   font-style: italic;
   font-weight: 400;
-  font-size: 1.35rem;
+  font-size: 24px;
+  /* border: 1px red solid; */
 }
 
 .quote {

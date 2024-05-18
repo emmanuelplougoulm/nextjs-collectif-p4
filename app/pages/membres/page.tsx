@@ -21,10 +21,8 @@ type Membre = {
 export default function Membres() {
   const [current, setCurrent] = useState<Membre>(config[0]);
 
-  console.log("current", current);
-
   // make it a custom hook
-  const handleMouseEnter = (item: Membre) => {
+  const handleOnclick = (item: Membre) => {
     setCurrent(item);
   };
 
@@ -41,7 +39,7 @@ export default function Membres() {
           <Container className={styles["lists-container"]}>
             <List className={styles["names-list"]}>
               {config.map((item) => (
-                <li onMouseEnter={() => handleMouseEnter(item)} key={item.name}>
+                <li onClick={() => handleOnclick(item)} key={item.name}>
                   {item.name}
                 </li>
               ))}

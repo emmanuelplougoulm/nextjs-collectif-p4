@@ -26,14 +26,13 @@ export default function Manifeste() {
               alt="triangle-icon"
             />
           </Container>
-
-          <div className={styles["paragraph"]}>{text.manifeste.paragraph}</div>
-
-          <div className={styles["quote"]}>
+          <p className={styles["paragraph"]}>{text.manifeste.paragraph}</p>
+          <Container className={styles["quote"]}>
             {text.manifeste.quote}
             <div>{text.manifeste.quoteAuthor}</div>
-          </div>
+          </Container>
         </section>
+
         <section className={styles["img-content"]}>
           <Image
             src={manifestePic}
