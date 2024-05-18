@@ -11,11 +11,13 @@
   position: fixed;
   top: 0;
   left: 0;
+
   display: flex;
   justify-content: center;
   align-items: center;
   height: 3.75rem;
   width: 100%;
+  background: #ffffff;
 }
 
 @media screen and (max-width: 768px) {

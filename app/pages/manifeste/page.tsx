@@ -14,7 +14,7 @@ export default function Manifeste() {
   return (
     <DefaultLayout>
       <Container className={styles["page-container"]}>
-        <section className={styles["text-content"]}>
+        <section className={styles["content-section"]}>
           <Container className={styles["title-container"]}>
             <Title tag="h3" className="section-title">
               {text.manifeste.title}
@@ -33,7 +33,7 @@ export default function Manifeste() {
           </Container>
         </section>
 
-        <section className={styles["img-content"]}>
+        <section className={styles["img-section"]}>
           <Image
             src={manifestePic}
             fill

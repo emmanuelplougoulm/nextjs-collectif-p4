@@ -22,20 +22,10 @@
   padding: 1rem;
 }
 
-.sub-container {
-  display: flex;
-  flex-direction: column;
-  /* background: violet; */
-  /* border: 1px green solid; */
-  flex: 1;
-
-  overflow-y: auto; /* Permet le défilement vertical */
-}
-
 .infos-container {
   /* background: green; */
   width: 440px;
-  padding-left: 30px;
+  padding-left: var(--left-gutter);
 }
 
 .shows-list {

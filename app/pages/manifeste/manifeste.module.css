@@ -3,14 +3,12 @@
   flex: 1;
 }
 
-.text-content {
+.content-section {
   flex: 2;
   display: flex;
   flex-direction: column;
-  padding-left: 30px;
+  padding-left: var(--left-gutter);
   padding-right: 150px;
-  border: 1px violet solid;
-  /* padding-top: 170px; */
 }
 
 .title-container {
@@ -18,7 +16,6 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  /* border: 1px green solid; */
 }
 
 .title-container img {
@@ -26,12 +23,9 @@
   margin-left: 20px;
 }
 
-.img-content {
+.img-section {
   flex: 1.5;
   position: relative;
-}
-.img-content img {
-  position: absolute;
 }
 
 .paragraph {
@@ -41,7 +35,6 @@
   font-style: italic;
   font-weight: 400;
   font-size: 24px;
-  /* border: 1px red solid; */
 }
 
 .quote {

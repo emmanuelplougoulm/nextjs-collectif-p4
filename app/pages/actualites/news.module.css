@@ -8,7 +8,7 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  padding: 0 0 0 30px;
+  padding: 0 0 0 var(--left-gutter);
   margin-top: var(--section-title-top-spacing);
 }
 

@@ -37,7 +37,7 @@ export default function Membres() {
           </Title>
 
           <Container className={styles["lists-container"]}>
-            <List className={styles["names-list"]}>
+            <List className={styles["members"]}>
               {config.map((item) => (
                 <li onClick={() => handleOnclick(item)} key={item.name}>
                   {item.name}

@@ -2,6 +2,7 @@
 
 :root {
   --section-title-top-spacing: 120px;
+  --left-gutter: 30px;
 }
 
 body {

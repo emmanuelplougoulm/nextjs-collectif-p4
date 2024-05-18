@@ -7,7 +7,7 @@
   display: flex;
   flex-direction: column;
   flex: 2;
-  padding: 0 3.75rem 0 1.875rem;
+  padding: 0 3.75rem 0 var(--left-gutter);
 }
 
 .lists-container {
@@ -16,7 +16,7 @@
   /* border: 1px orange solid; */
 }
 
-.names-list {
+.members {
   width: 438px;
   cursor: pointer;
   font-family: "Source Serif 4", serif;
