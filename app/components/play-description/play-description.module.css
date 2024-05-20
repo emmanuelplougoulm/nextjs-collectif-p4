@@ -1,26 +1,25 @@
-.show-description-container {
+.container {
   margin-top: 25px;
   display: flex;
   flex-direction: column;
   gap: 10px;
-
   padding-right: 30px;
+
+  font-family: "Inter", sans-serif;
 }
 
-.date {
-  font-family: "Inter", sans-serif;
+.date-city {
   font-weight: 800;
   font-size: 14px;
 }
 
 .place {
-  font-family: "Inter", sans-serif;
-  font-weight: 800;
+  font-weight: 600;
   font-size: 14px;
 }
 
 .description {
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 14px;
+  line-height: 1.2;
 }
