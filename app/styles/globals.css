@@ -23,8 +23,6 @@ a:hover {
   text-decoration: none;
 }
 
-/*  */
-
 @media screen and (max-width: 768px) {
   :root {
     --section-title-top-spacing: 20px;
