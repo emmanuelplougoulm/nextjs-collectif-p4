@@ -9,13 +9,13 @@ type Spectacle = {
   description: string;
 };
 
-type item = {
+type Play = {
   item: Spectacle;
 };
 
-const showDescription: React.FC<item> = ({ item }) => {
+const PlayDescription: React.FC<Play> = ({ item }) => {
   return (
-    <div className={styles["container"]}>
+    <main className={styles["main"]}>
       <div className={styles["date-city"]}>{item.dateAndCity}</div>
       <List>
         {item.place.map((item: any, index: any) => (
@@ -26,8 +26,8 @@ const showDescription: React.FC<item> = ({ item }) => {
       </List>
 
       <div className={styles["description"]}>{item.description}</div>
-    </div>
+    </main>
   );
 };
 
-export default showDescription;
+export default PlayDescription;
