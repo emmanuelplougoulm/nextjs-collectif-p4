@@ -1,5 +1,7 @@
 import React from "react";
 
+import styles from "./iframe.module.css";
+
 type IframeProps = {
   demoUrl: string;
   className?: string;
@@ -7,10 +9,10 @@ type IframeProps = {
 
 const Container: React.FC<IframeProps> = ({ demoUrl, className }) => {
   return (
-    <div className={className}>
+    <div className={styles["container"]}>
       <iframe
-        width="100%"
-        height="315"
+        width={"100%"}
+        height={"100%"}
         src={demoUrl}
         title="YouTube video player"
         frameBorder="0"
