@@ -4,70 +4,94 @@ import config from "@/app/pages/spectacles/config";
 import { useState } from "react";
 
 import ImageList from "@/app/components/imageList/imageList";
-import ArticleQuote from "@/app/components/article-quote/article-quote";
-import SpectacleDescription from "@/app/components/spectacle-description/spectacle-description";
+import MediaQuote from "@/app/components/media-quote/media-quote";
+import PlayDescription from "@/app/components/play-description/play-description";
 import DefaultLayout from "@/app/layouts/DefaultLayout";
 import List from "@/app/components/shared/list/list";
 import Container from "@/app/components/shared/container/container";
 import Iframe from "@/app/components/shared/iframe/iframe";
+import ImageSlider from "@/app/components/imageSlider/image-slider";
+
+import Button from "@/app/components/shared/button/button";
+
 import text from "@/locales/fr/all.json";
 
 export default function Spectacles() {
   const [current, setCurrent] = useState<any>(config[0]);
+  const [isFirstClicked, setFirstClic] = useState<boolean>(false);
+  const [content, setContent] = useState<any>("images");
 
-  const [content, setContent] = useState<any>();
-
-  const handleMouseEnter = (item: any) => {
+  const handleOnClick = (item: any) => {
+    setFirstClic(true);
     setCurrent(item);
   };
 
   const displayDemo = content === "demo" ? true : false;
-  const displayImages = content === "photos" ? true : false;
-  const displayQuotes = content === "presse" ? true : false;
+  const displayImages = content === "images" ? true : false;
+  const displayQuotes = content === "quotes" ? true : false;
+
+  // console.log("current", current);
 
   return (
     <DefaultLayout>
-      <Container className={styles["page-container"]}>
-        <Container className={styles["infos-container"]}>
+      <main className={styles["main"]}>
+        <section className={styles["left-section"]}>
           <Container className={styles["section-title-container"]}>
             <div className="section-title"> {text.spectacles.title}</div>
           </Container>
-          <div className={styles["shows-list"]}>
-            <List>
-              {config.map((item) => (
-                <li key={item.name} onClick={() => handleMouseEnter(item)}>
-                  {item.name}
-                </li>
-              ))}
-            </List>
-          </div>
-          <SpectacleDescription item={current} />
-          <div className={styles["buttons-container"]}>
-            <button onClick={() => setContent("demo")}>Demo</button>
-            <button onClick={() => setContent("photos")}>Photos</button>
-            <button onClick={() => setContent("presse")}>Presse</button>
-          </div>
-        </Container>
 
-        <Container className={styles["content-container"]}>
-          <div className={styles["big-title"]}>{current.name}</div>
-          <div className={styles["demo"]}>
-            {displayDemo && <Iframe demoUrl={current.demoUrl} />}
-          </div>
+          <List className={styles["plays"]}>
+            {config.map((item) => (
+              <li key={item.name} onClick={() => handleOnClick(item)}>
+                {item.name}
+              </li>
+            ))}
+          </List>
+
+          {isFirstClicked && (
+            <>
+              <PlayDescription item={current} />
+
+              <Container className={styles["buttons-container"]}>
+                <Button
+                  className={styles["content-btn"]}
+                  onClick={() => setContent("demo")}
+                >
+                  Demo
+                </Button>
+                <Button
+                  className={styles["content-btn"]}
+                  onClick={() => setContent("images")}
+                >
+                  Images
+                </Button>
+                <Button
+                  className={styles["content-btn"]}
+                  onClick={() => setContent("quotes")}
+                >
+                  Quotes
+                </Button>
+              </Container>
+            </>
+          )}
+        </section>
+
+        <section className={styles["right-section"]}>
+          {/* {displayDemo && <div>demo</div>} */}
           {displayImages && (
-            <div className={styles["img-container"]}>
-              <ImageList imagePaths={current.images} />
+            <div>
+              <ImageSlider images={current.images} />
             </div>
           )}
-          {displayQuotes && (
-            <div className={styles["quotes-container"]}>
-              {current.quotes.map((item: any, index: any) => (
-                <ArticleQuote key={index} data={item} />
+          {/* {displayQuotes && (
+            <div>
+              {current.quotes.map((quote: any, index: any) => (
+                <MediaQuote key={index} quote={quote} />
               ))}
             </div>
-          )}
-        </Container>
-      </Container>
+          )} */}
+        </section>
+      </main>
     </DefaultLayout>
   );
 }

@@ -1,37 +1,48 @@
-.page-container {
+.main {
   display: flex;
   flex: 1;
   /* border: 1px violet solid; */
+}
+
+.left-section {
+  /* background: green; */
+  width: 540px;
+  padding-left: var(--left-gutter);
+}
+
+.right-section {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  /* background: violet; */
+  /* border: 1px blue solid; */
+  padding-top: var(--section-title-top-spacing);
 }
 
 .section-title-container {
   margin-top: var(--section-title-top-spacing);
 }
 
-.content-container {
-  display: flex;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  background: violet;
-  flex: 1;
-}
-
 .buttons-container {
   display: flex;
-  padding: 1rem;
+  padding: 1rem 0;
+  justify-content: flex-start;
+  /* border: 1px black solid; */
 }
 
-.infos-container {
-  /* background: green; */
-  width: 440px;
-  padding-left: var(--left-gutter);
+.content-btn {
+  border-radius: 4px;
+  background: black;
+  color: white;
 }
 
-.shows-list {
-  /* background: pink; */
+.buttons-container :not(:first-child) {
+  margin-left: 20px;
+}
+
+.plays {
   margin-top: 40px;
-
   font-family: "Source Serif 4", serif;
   font-weight: 400;
   font-size: 18px;
@@ -41,41 +52,6 @@
   transition: opacity 0.6s ease;
 }
 
-.shows-list a:hover > :not(:hover) {
+.plays ul li:hover > :not(:hover) {
   opacity: 0.2;
-}
-
-.big-title {
-  font-family: "Inter", sans-serif;
-  font-weight: 800;
-  font-size: 62px;
-  line-height: 1;
-
-  cursor: pointer;
-  transition: opacity 0.6s ease;
-  text-transform: uppercase;
-  margin-top: var(--section-title-top-spacing);
-}
-
-.date {
-  font-family: "Inter", sans-serif;
-  font-weight: 800;
-  font-size: 14px;
-}
-
-.place {
-  font-family: "Inter", sans-serif;
-  font-weight: 800;
-  font-size: 14px;
-}
-
-.description {
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-}
-
-.image {
-  position: relative;
-  height: 200px;
 }
