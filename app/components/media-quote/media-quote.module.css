@@ -7,14 +7,21 @@
   margin: 10px 0;
 }
 
+.infos {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
 .text {
   font-weight: 400;
-  font-size: 18px;
+  font-size: 14px;
   font-style: italic;
+  width: 900px;
 }
 .media {
   font-weight: 600;
-  font-size: 16px;
+  font-size: 12px;
 }
 .url {
   font-weight: 400;
