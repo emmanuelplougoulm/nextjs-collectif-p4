@@ -3,14 +3,13 @@ import styles from "@/app/pages/spectacles/spectacles.module.css";
 import config from "@/app/pages/spectacles/config";
 import { useState } from "react";
 
-import ImageList from "@/app/components/imageList/imageList";
 import Media from "@/app/components/media/media";
 import PlayDescription from "@/app/components/play-description/play-description";
-import DefaultLayout from "@/app/layouts/DefaultLayout";
+import DefaultLayout from "@/app/layouts/default-layout";
 import List from "@/app/components/shared/list/list";
 import Container from "@/app/components/shared/container/container";
 import Iframe from "@/app/components/shared/iframe/iframe";
-import ImageSlider from "@/app/components/imageSlider/image-slider";
+// import ImageSlider from "@/app/components/imageSlider/image-slider";
 
 import Button from "@/app/components/shared/button/button";
 
@@ -19,7 +18,7 @@ import text from "@/locales/fr/all.json";
 export default function Spectacles() {
   const [current, setCurrent] = useState<any>(config[0]);
   const [isFirstClicked, setFirstClic] = useState<boolean>(false);
-  const [content, setContent] = useState<any>("images");
+  const [content, setContent] = useState<string>("");
 
   const handleOnClick = (item: any) => {
     setFirstClic(true);
@@ -28,12 +27,12 @@ export default function Spectacles() {
   };
 
   const showDemoButton = current.demoUrl ? true : false;
+  const showPhotosButton = current.images.length > 0 ? true : false;
   const showMediaButton = current.media ? true : false;
 
   const displayDemo = content === "demo" && current.demoUrl ? true : false;
+  const displayImages = content === "photos" ? true : false;
   const displayMedia = content === "media" && current.media ? true : false;
-
-  // console.log("current", current);
 
   return (
     <DefaultLayout>
@@ -57,27 +56,31 @@ export default function Spectacles() {
 
               <Container className={styles["buttons-container"]}>
                 {showDemoButton && (
-                <Button
-                  className={styles["content-btn"]}
-                  onClick={() => setContent("demo")}
-                >
-                  Demo
-                </Button>
+                  <Button
+                    className={styles["content-btn"]}
+                    onClick={() => setContent("demo")}
+                  >
+                    Demo
+                  </Button>
                 )}
-                <Button
-                  className={styles["content-btn"]}
-                  onClick={() => setContent("images")}
-                >
-                  Images
-                </Button>
+
+                {showPhotosButton && (
+                  <Button
+                    className={styles["content-btn"]}
+                    onClick={() => setContent("photos")}
+                  >
+                    Images
+                  </Button>
+                )}
 
                 {showMediaButton && (
-                <Button
-                  className={styles["content-btn"]}
+                  <Button
+                    className={styles["content-btn"]}
                     onClick={() => setContent("media")}
-                >
+                  >
                     Media
-                </Button>
+                  </Button>
+                )}
               </Container>
             </>
           )}

@@ -1,6 +1,6 @@
 import styles from "@/app/pages/manifeste/manifeste.module.css";
 
-import DefaultLayout from "@/app/layouts/DefaultLayout";
+import DefaultLayout from "@/app/layouts/default-layout";
 import Image from "next/image";
 import Title from "@/app/components/shared/title/title";
 import Container from "@/app/components/shared/container/container";

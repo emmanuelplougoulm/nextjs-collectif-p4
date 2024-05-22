@@ -2,7 +2,7 @@
 import styles from "@/app/pages/contact/contact.module.css";
 
 import Image from "next/image";
-import DefaultLayout from "@/app/layouts/DefaultLayout";
+import DefaultLayout from "@/app/layouts/default-layout";
 import Title from "@/app/components/shared/title/title";
 import Container from "@/app/components/shared/container/container";
 

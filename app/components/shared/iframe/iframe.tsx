@@ -4,18 +4,16 @@ import styles from "./iframe.module.css";
 
 type IframeProps = {
   demoUrl: string;
-  className?: string;
 };
 
-const Container: React.FC<IframeProps> = ({ demoUrl, className }) => {
+const Iframe: React.FC<IframeProps> = ({ demoUrl }) => {
   return (
     <div className={styles["container"]}>
       <iframe
+        src={demoUrl}
         width={"100%"}
         height={"100%"}
-        src={demoUrl}
-        title="YouTube video player"
-        frameBorder="0"
+        title="video_player"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowFullScreen
       ></iframe>
@@ -23,4 +21,4 @@ const Container: React.FC<IframeProps> = ({ demoUrl, className }) => {
   );
 };
 
-export default Container;
+export default Iframe;

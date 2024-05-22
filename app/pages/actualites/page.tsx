@@ -4,7 +4,7 @@ import config from "@/app/pages/actualites/config";
 import pic from "@/public/assets/webp/laib-khaled.webp";
 
 import Image from "next/image";
-import DefaultLayout from "@/app/layouts/DefaultLayout";
+import DefaultLayout from "@/app/layouts/default-layout";
 import Container from "@/app/components/shared/container/container";
 import Title from "@/app/components/shared/title/title";
 import News from "@/app/components/news/news";

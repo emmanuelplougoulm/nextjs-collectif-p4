@@ -4,7 +4,7 @@ import config from "@/app/pages/membres/config";
 import { useState } from "react";
 
 import Image from "next/image";
-import DefaultLayout from "@/app/layouts/DefaultLayout";
+import DefaultLayout from "@/app/layouts/default-layout";
 import List from "@/app/components/shared/list/list";
 import Title from "@/app/components/shared/title/title";
 import Container from "@/app/components/shared/container/container";

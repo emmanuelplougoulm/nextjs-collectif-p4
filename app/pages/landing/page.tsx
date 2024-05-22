@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 import styles from "./landing.module.css";
-import DefaultLayout from "../../layouts/DefaultLayout";
+import DefaultLayout from "../../layouts/default-layout";
 import pic from "@/public/assets/webp/landing.webp";
 
 import Container from "../../components/shared/container/container";
