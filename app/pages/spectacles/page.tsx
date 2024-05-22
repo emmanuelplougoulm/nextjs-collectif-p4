@@ -25,13 +25,53 @@ export default function Spectacles() {
     setContent("demo");
   };
 
-  const showDemoButton = current.demoUrl ? true : false;
-  const showPhotosButton = current.images.length > 0 ? true : false;
-  const showMediaButton = current.media ? true : false;
+  const renderContentButtons = () => (
+    <Container className={styles["buttons-container"]}>
+      {current.demoUrl && (
+        <Button
+          className={styles["content-btn"]}
+          onClick={() => setContent("demo")}
+        >
+          Demo
+        </Button>
+      )}
+      {current.images.length > 0 && (
+        <Button
+          className={styles["content-btn"]}
+          onClick={() => setContent("photos")}
+        >
+          Images
+        </Button>
+      )}
+      {current.media && (
+        <Button
+          className={styles["content-btn"]}
+          onClick={() => setContent("media")}
+        >
+          Media
+        </Button>
+      )}
+    </Container>
+  );
 
-  const displayDemo = content === "demo" && current.demoUrl ? true : false;
-  const displayImages = content === "photos" ? true : false;
-  const displayMedia = content === "media" && current.media ? true : false;
+  const renderContent = () => {
+    switch (content) {
+      case "demo":
+        return current.demoUrl && <Iframe demoUrl={current.demoUrl} />;
+      case "photos":
+        return <ImageSlider images={current.images} />;
+      case "media":
+        return (
+          <Container className={styles["media-container"]}>
+            {current.media.map((item: any, index: any) => (
+              <Media key={index} media={item} />
+            ))}
+          </Container>
+        );
+      default:
+        return null;
+    }
+  };
 
   return (
     <DefaultLayout>
@@ -43,7 +83,11 @@ export default function Spectacles() {
 
           <List className={styles["plays"]}>
             {config.map((item, index) => (
-              <li key={index} onClick={() => handleOnClick(item)}>
+              <li
+                key={index}
+                className={current.name === item.name ? styles["selected"] : ""}
+                onClick={() => handleOnClick(item)}
+              >
                 {item.name}
               </li>
             ))}
@@ -53,49 +97,12 @@ export default function Spectacles() {
             <>
               <PlayDescription item={current} />
 
-              <Container className={styles["buttons-container"]}>
-                {showDemoButton && (
-                  <Button
-                    className={styles["content-btn"]}
-                    onClick={() => setContent("demo")}
-                  >
-                    Demo
-                  </Button>
-                )}
-
-                {showPhotosButton && (
-                  <Button
-                    className={styles["content-btn"]}
-                    onClick={() => setContent("photos")}
-                  >
-                    Images
-                  </Button>
-                )}
-
-                {showMediaButton && (
-                  <Button
-                    className={styles["content-btn"]}
-                    onClick={() => setContent("media")}
-                  >
-                    Media
-                  </Button>
-                )}
-              </Container>
+              {renderContentButtons()}
             </>
           )}
         </section>
 
-        <section className={styles["right-section"]}>
-          {displayDemo && <Iframe demoUrl={current.demoUrl} />}
-          {displayImages && <ImageSlider images={current.images} />}
-          {displayMedia && (
-            <Container className={styles["media-container"]}>
-              {current.media.map((item: any, index: any) => (
-                <Media key={index} media={item} />
-              ))}
-            </Container>
-          )}
-        </section>
+        <section className={styles["right-section"]}>{renderContent()}</section>
       </main>
     </DefaultLayout>
   );

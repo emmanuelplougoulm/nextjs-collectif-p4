@@ -1,6 +1,7 @@
 .main {
   display: flex;
   flex: 1;
+  overflow: hidden;
 }
 
 .left-section {
@@ -54,4 +55,8 @@
 
 .plays ul li:hover > :not(:hover) {
   opacity: 0.2;
+}
+
+.selected {
+  text-decoration: underline;
 }
