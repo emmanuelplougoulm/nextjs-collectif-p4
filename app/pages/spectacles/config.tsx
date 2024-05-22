@@ -61,7 +61,7 @@ const config = [
     place: ["Le couvent Levat"],
     description:
       "Une élue à la culture accueille le public venu voir la nouvelle création du collectif. Le spectacle n'est pas prêt. Elle est kidnappée pour être offerte en sacrifice. La troupe est en fait une secte complètement givrée. Un couvent, un jardin, des couloirs, une chapelle.",
-    demoUrl: "https://www.youtube.com/watch?v=J0eeaM7c6kg",
+    demoUrl: "https://www.youtube.com/embed/J0eeaM7c6kg",
     images: ["/images/spectacles/dernier/disco_ball.webp"],
   },
   {
@@ -70,7 +70,7 @@ const config = [
     place: ["Création collective In Situ et Immersive"],
     description:
       "Invité en résidence pour le festival « ITINERAIRE BIS » de la fontaine Minérale, P4 crée et joue ce spectacle en Juillet 2020. Masqué, le public suit Charlie, jeune femme venant s’installer dans une communauté New Age des années 80. Une déambulation joyeusement foutraque, parfois glauque mais toujours amusante dans des lieux aussi éclectiques que magnifiques : bar, rivière, chapiteau déglingué, camping abandonné, chemins sinueux, voiture, vieux camping car et forêt.",
-    demoUrl: "https://vimeo.com/505564858",
+    demoUrl: "https://player.vimeo.com/video/505564858?h=eabd48ad22",
     images: ["/images/spectacles/castor/tail.webp"],
   },
   {
@@ -79,7 +79,7 @@ const config = [
     place: [],
     description:
       "Ma soeur, tes lèvres sont de porcelaine Première création immersive de P4 guide le spectateur dans un parcours escarpé à partir d'une laverie publique, point de départ d'une déambulation qui nous fait découvrir tour à tour les restes d’une ancienne costumerie de cabaret, un appartement familial, une pizzeria fermée, une chapelle abandonnée.",
-    demoUrl: "https://vimeo.com/509780969",
+    demoUrl: "https://player.vimeo.com/video/509780969?h=af17331d10",
     images: ["/images/spectacles/porcelaine/masoeur.webp"],
   },
 ];

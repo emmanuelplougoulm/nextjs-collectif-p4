@@ -24,11 +24,11 @@ export default function Spectacles() {
   const handleOnClick = (item: any) => {
     setFirstClic(true);
     setCurrent(item);
+    setContent("demo");
   };
 
-  const displayDemo = content === "demo" ? true : false;
-  const displayImages = content === "images" ? true : false;
-  const displayQuotes = content === "quotes" ? true : false;
+  const showDemoButton = current.demoUrl ? true : false;
+  const displayDemo = content === "demo" && current.demoUrl ? true : false;
 
   // console.log("current", current);
 
@@ -53,12 +53,14 @@ export default function Spectacles() {
               <PlayDescription item={current} />
 
               <Container className={styles["buttons-container"]}>
+                {showDemoButton && (
                 <Button
                   className={styles["content-btn"]}
                   onClick={() => setContent("demo")}
                 >
                   Demo
                 </Button>
+                )}
                 <Button
                   className={styles["content-btn"]}
                   onClick={() => setContent("images")}
@@ -77,15 +79,8 @@ export default function Spectacles() {
         </section>
 
         <section className={styles["right-section"]}>
-          {/* {displayDemo && <div>demo</div>} */}
-          {displayImages && (
-            <div>
-              <ImageSlider images={current.images} />
-            </div>
-          )}
-          {/* {displayQuotes && (
-            <div>
-              {current.quotes.map((quote: any, index: any) => (
+          {displayDemo && <Iframe demoUrl={current.demoUrl} />}
+          {/* {displayImages && <ImageSlider images={current.images} />} */}
                 <MediaQuote key={index} quote={quote} />
               ))}
             </div>
