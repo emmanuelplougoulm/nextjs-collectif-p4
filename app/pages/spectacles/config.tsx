@@ -40,7 +40,7 @@ const config = [
     demoUrl: "https://www.youtube.com/embed/MPLQDtOdZZ8?si=xBH-ZXMTi45olKR3",
     images: [
       "/images/spectacles/bezos/1.webp",
-      "/images/spectacles/bezos/2.webp",
+      "/images/spectacles/bezos/12.webp",
       "/images/spectacles/bezos/3.webp",
       "/images/spectacles/bezos/4.webp",
       "/images/spectacles/bezos/5.webp",
@@ -48,12 +48,9 @@ const config = [
       "/images/spectacles/bezos/7.webp",
       "/images/spectacles/bezos/8.webp",
       "/images/spectacles/bezos/9.webp",
+      "/images/spectacles/bezos/2.webp",
       "/images/spectacles/bezos/10.webp",
       "/images/spectacles/bezos/11.webp",
-      "/images/spectacles/bezos/12.webp",
-      "/images/spectacles/bezos/13.webp",
-      "/images/spectacles/bezos/14.webp",
-      "/images/spectacles/bezos/15.webp",
     ],
   },
   {

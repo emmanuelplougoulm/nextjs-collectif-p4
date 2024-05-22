@@ -9,8 +9,7 @@ import DefaultLayout from "@/app/layouts/default-layout";
 import List from "@/app/components/shared/list/list";
 import Container from "@/app/components/shared/container/container";
 import Iframe from "@/app/components/shared/iframe/iframe";
-// import ImageSlider from "@/app/components/imageSlider/image-slider";
-
+import ImageSlider from "@/app/components/image-slider/image-slider";
 import Button from "@/app/components/shared/button/button";
 
 import text from "@/locales/fr/all.json";
@@ -18,7 +17,7 @@ import text from "@/locales/fr/all.json";
 export default function Spectacles() {
   const [current, setCurrent] = useState<any>(config[0]);
   const [isFirstClicked, setFirstClic] = useState<boolean>(false);
-  const [content, setContent] = useState<string>("");
+  const [content, setContent] = useState<string>("photos");
 
   const handleOnClick = (item: any) => {
     setFirstClic(true);
@@ -88,7 +87,7 @@ export default function Spectacles() {
 
         <section className={styles["right-section"]}>
           {displayDemo && <Iframe demoUrl={current.demoUrl} />}
-          {/* {displayImages && <ImageSlider images={current.images} />} */}
+          {displayImages && <ImageSlider images={current.images} />}
           {displayMedia && (
             <Container className={styles["media-container"]}>
               {current.media.map((item: any, index: any) => (

@@ -1,22 +1,16 @@
 .main {
   display: flex;
   flex: 1;
-  /* border: 1px violet solid; */
 }
 
 .left-section {
-  /* background: green; */
-  width: 540px;
+  width: 440px;
   padding-left: var(--left-gutter);
 }
 
 .right-section {
+  width: calc(100vw - 440px);
   display: flex;
-  flex: 1;
-  flex-direction: column;
-  justify-content: space-between;
-  /* background: violet; */
-  /* border: 1px blue solid; */
   padding-top: var(--section-title-top-spacing);
 }
 
@@ -28,13 +22,19 @@
   display: flex;
   padding: 1rem 0;
   justify-content: flex-start;
-  /* border: 1px black solid; */
 }
 
 .content-btn {
+  all: unset;
+
   border-radius: 4px;
   background: black;
   color: white;
+
+  cursor: pointer;
+  padding: 0.4rem;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
 }
 
 .buttons-container :not(:first-child) {
