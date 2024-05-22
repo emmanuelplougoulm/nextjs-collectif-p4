@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import styles from "./burgerMenu.module.css";
+import styles from "./burger-menu.module.css";
 
 import Link from "next/link";
 
