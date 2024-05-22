@@ -26,6 +26,7 @@
     "title": "Contact"
   },
   "actions": {
-    "enter": "Entrer"
+    "enter": "Entrer",
+    "readArticle": "Lire l'article"
   }
 }

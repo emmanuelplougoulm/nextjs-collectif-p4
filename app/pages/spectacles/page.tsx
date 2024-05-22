@@ -4,7 +4,7 @@ import config from "@/app/pages/spectacles/config";
 import { useState } from "react";
 
 import ImageList from "@/app/components/imageList/imageList";
-import MediaQuote from "@/app/components/media-quote/media-quote";
+import Media from "@/app/components/media/media";
 import PlayDescription from "@/app/components/play-description/play-description";
 import DefaultLayout from "@/app/layouts/DefaultLayout";
 import List from "@/app/components/shared/list/list";
@@ -28,7 +28,10 @@ export default function Spectacles() {
   };
 
   const showDemoButton = current.demoUrl ? true : false;
+  const showMediaButton = current.media ? true : false;
+
   const displayDemo = content === "demo" && current.demoUrl ? true : false;
+  const displayMedia = content === "media" && current.media ? true : false;
 
   // console.log("current", current);
 
@@ -41,8 +44,8 @@ export default function Spectacles() {
           </Container>
 
           <List className={styles["plays"]}>
-            {config.map((item) => (
-              <li key={item.name} onClick={() => handleOnClick(item)}>
+            {config.map((item, index) => (
+              <li key={index} onClick={() => handleOnClick(item)}>
                 {item.name}
               </li>
             ))}
@@ -67,11 +70,13 @@ export default function Spectacles() {
                 >
                   Images
                 </Button>
+
+                {showMediaButton && (
                 <Button
                   className={styles["content-btn"]}
-                  onClick={() => setContent("quotes")}
+                    onClick={() => setContent("media")}
                 >
-                  Quotes
+                    Media
                 </Button>
               </Container>
             </>
@@ -81,10 +86,13 @@ export default function Spectacles() {
         <section className={styles["right-section"]}>
           {displayDemo && <Iframe demoUrl={current.demoUrl} />}
           {/* {displayImages && <ImageSlider images={current.images} />} */}
-                <MediaQuote key={index} quote={quote} />
+          {displayMedia && (
+            <Container className={styles["media-container"]}>
+              {current.media.map((item: any, index: any) => (
+                <Media key={index} media={item} />
               ))}
-            </div>
-          )} */}
+            </Container>
+          )}
         </section>
       </main>
     </DefaultLayout>

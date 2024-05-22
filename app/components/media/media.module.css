@@ -14,15 +14,22 @@
 }
 
 .text {
-  font-weight: 400;
-  font-size: 14px;
+  font-weight: 200;
+  font-size: 18px;
   font-style: italic;
   width: 900px;
 }
-.media {
+
+.media,
+.media-btn {
   font-weight: 600;
   font-size: 12px;
 }
+
+.media-btn:hover {
+  text-decoration: underline;
+}
+
 .url {
   font-weight: 400;
   font-size: 12px;
