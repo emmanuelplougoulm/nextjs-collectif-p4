@@ -32,7 +32,7 @@ export default function Membres() {
     <DefaultLayout>
       <Container className={styles["page-container"]}>
         <section className={styles["text-section"]}>
-          <Title tag="h3" className={styles["section-title"]}>
+          <Title tag="h3" className={`${styles["title"]} section-title`}>
             {text.membres.title}
           </Title>
 
