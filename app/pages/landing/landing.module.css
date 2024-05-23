@@ -1,28 +1,28 @@
-.page-container {
+.main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   flex: 1;
-  padding-top: 60px;
+  padding-top: 6.25rem;
 }
 
-.content-top {
-  height: 150px;
+.top-section {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  height: 9.375rem;
 }
 
-.content-top img {
+.top-section img {
   transform: rotate(90deg);
-  margin-top: 16px;
+  margin-top: 1rem;
 }
 
-.content-middle {
+.middle-section {
   display: flex;
-  height: 400px;
-  padding-left: 30px;
+  height: 18.75rem;
+  padding-left: var(--left-gutter);
 }
 
 .large-title-container {
@@ -36,28 +36,21 @@
   width: 40%;
 }
 
-.content-bottom {
-  padding-left: 30px;
-  height: 65px;
+.bottom-section {
+  height: 4.0625rem;
   display: flex;
   align-items: center;
-  /* border: 1px red solid; */
-  justify-content: "center";
+  justify-content: center;
+  position: relative;
 }
-
-/* .img-container{
-  margin-left: ;
-
-
-} */
 
 /* FONT STYLES */
 
 .large-title {
   font-family: "Inter", sans-serif;
   font-weight: 700;
-  line-height: 80px;
-  font-size: 70px;
+  line-height: 5rem;
+  font-size: 4.375rem;
   text-transform: uppercase;
 }
 
@@ -71,14 +64,16 @@
 
 .copyright {
   font-family: "Source Serif 4", serif;
+  position: absolute;
+  left: var(--left-gutter);
 }
 
 @media screen and (max-width: 768px) {
-  .page-container {
+  .main {
     margin-left: 0;
   }
 
-  .content-middle {
+  .middle-section {
     flex-direction: column-reverse;
     padding-left: 0;
   }
@@ -91,18 +86,19 @@
     text-align: center;
   }
 
-  .content-bottom {
+  .bottom-section {
     justify-content: center;
   }
 
-  .content-bottom img {
+  .bottom-section img {
     display: none;
   }
 }
 
 @media screen and (max-width: 480px) {
-  .page-container {
-    margin-left: 0;
+  .main {
+    justify-content: center;
+    padding: 1rem;
   }
 
   .large-title-container {
@@ -112,16 +108,16 @@
   }
 
   .large-title {
-    font-size: 25px;
-    line-height: 25px;
+    font-size: 1.5625rem;
+    line-height: 1.5625rem;
     text-align: center;
   }
 
   .small-title {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
 
-  .content-middle {
+  .middle-section {
     flex-direction: column-reverse;
   }
 
@@ -131,12 +127,16 @@
     flex: 2;
   }
 
-  .content-bottom {
+  .bottom-section {
     justify-content: center;
     padding-left: 0;
   }
 
-  .content-bottom img {
+  .bottom-section img {
+    display: none;
+  }
+
+  .copyright {
     display: none;
   }
 }
