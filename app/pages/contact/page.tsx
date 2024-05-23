@@ -12,7 +12,7 @@ import text from "@/locales/fr/all.json";
 export default function Contact() {
   return (
     <DefaultLayout>
-      <Container className={styles["page-container"]}>
+      <main className={styles["main"]}>
         <Container className={styles["title-container"]}>
           <Title tag="h3" className="section-title">
             {text.contact.title}
@@ -21,28 +21,28 @@ export default function Contact() {
         <Container className={styles["contacts-container"]}>
           <div>
             <Title tag="h4" className={styles["contact-title"]}>
-              Instagram
+              {text.contact.instagram}
             </Title>
             <a
-              href="https://www.instagram.com/collectifp4/"
+              href={text.contact.instagramUrl}
               target="_blank"
               rel="noopener noreferrer"
             >
-              https://www.instagram.com/collectifp4/
+              Lien
             </a>
           </div>
           <div>
             <Title tag="h4" className={styles["contact-title"]}>
-              Téléphone
+              {text.contact.phone}
             </Title>
-            <div>Arthur Viadieu: 06 99 90 04 74</div>
-            <div>Bob Levasseur: 07 69 18 94 49</div>
+            <div>{text.contact.arthur}</div>
+            <div>{text.contact.bob}</div>
           </div>
           <div>
             <Title tag="h4" className={styles["contact-title"]}>
-              Email
+              {text.contact.email}
             </Title>
-            <div>associationp4@gmail.com</div>
+            <div>{text.contact.mail}</div>
           </div>
         </Container>
         <Container className={styles["img-content"]}>
@@ -53,7 +53,7 @@ export default function Contact() {
             alt="sea_photo"
           />
         </Container>
-      </Container>
+      </main>
     </DefaultLayout>
   );
 }
