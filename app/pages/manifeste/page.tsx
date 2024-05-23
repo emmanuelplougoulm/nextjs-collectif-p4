@@ -7,13 +7,12 @@ import Container from "@/app/components/shared/container/container";
 import TriangleIcon from "@/app/components/icons/triangle.svg";
 
 import manifestePic from "@/public/assets/webp/manifeste.webp";
-
 import text from "@/locales/fr/all.json";
 
 export default function Manifeste() {
   return (
     <DefaultLayout>
-      <Container className={styles["page-container"]}>
+      <main className={styles["main"]}>
         <section className={styles["content-section"]}>
           <Container className={styles["title-container"]}>
             <Title tag="h3" className="section-title">
@@ -23,13 +22,13 @@ export default function Manifeste() {
               src={TriangleIcon}
               width={15}
               height={15}
-              alt="triangle-icon"
+              alt="triangle_icon"
             />
           </Container>
           <p className={styles["paragraph"]}>{text.manifeste.paragraph}</p>
           <Container className={styles["quote"]}>
-            {text.manifeste.quote}
-            <div>{text.manifeste.quoteAuthor}</div>
+            <blockquote>{text.manifeste.quote}</blockquote>
+            <cite>{text.manifeste.quoteAuthor}</cite>
           </Container>
         </section>
 
@@ -41,7 +40,7 @@ export default function Manifeste() {
             alt="lightbeams_trees"
           />
         </section>
-      </Container>
+      </main>
     </DefaultLayout>
   );
 }
