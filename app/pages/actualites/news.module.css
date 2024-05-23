@@ -1,4 +1,4 @@
-.page-container {
+.main {
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -20,12 +20,11 @@
 
 .img-section {
   flex: 1.5;
-  background: lightskyblue;
   position: relative;
 }
 
 @media screen and (max-width: 768px) {
-  .page-container {
+  .main {
     flex-direction: column-reverse;
   }
 
@@ -35,7 +34,7 @@
 }
 
 @media screen and (max-width: 480px) {
-  .page-container {
+  .main {
     flex-direction: column-reverse;
   }
 }

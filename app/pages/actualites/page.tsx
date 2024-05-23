@@ -14,7 +14,7 @@ import text from "@/locales/fr/all.json";
 export default function news() {
   return (
     <DefaultLayout>
-      <Container className={styles["page-container"]}>
+      <main className={styles["main"]}>
         <section className={styles["text-section"]}>
           <Title tag="h3" className="section-title">
             {text.spectacles.title}
@@ -35,7 +35,7 @@ export default function news() {
             alt="group of people photo"
           />
         </section>
-      </Container>
+      </main>
     </DefaultLayout>
   );
 }
