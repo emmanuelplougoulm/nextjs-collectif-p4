@@ -30,7 +30,7 @@ export default function Membres() {
 
   return (
     <DefaultLayout>
-      <Container className={styles["page-container"]}>
+      <main className={styles["main"]}>
         <section className={styles["text-section"]}>
           <Title tag="h3" className={`${styles["title"]} section-title`}>
             {text.membres.title}
@@ -60,7 +60,7 @@ export default function Membres() {
           </Container>
         </section>
 
-        <Container className={styles["img-container"]}>
+        <section className={styles["img-section"]}>
           <Image
             priority
             fill
@@ -68,8 +68,8 @@ export default function Membres() {
             src={`${BASE_LOAD_URL}${current.imageName}`}
             alt={current.name}
           />
-        </Container>
-      </Container>
+        </section>
+      </main>
     </DefaultLayout>
   );
 }
