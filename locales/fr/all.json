@@ -5,7 +5,7 @@
     "collectiveCities": ["Paris", "St-Étienne", "Marseille"]
   },
   "landing": {
-    "smallTitle": "Collectif tout-terrain racontant des histoires avec un filtre\u000Ade poésie, d'humour, de rage et de folie."
+    "copyright": "@2024 - Collectif P4"
   },
   "manifeste": {
     "title": "Manifeste",
@@ -23,7 +23,14 @@
     "title": "Spectacles"
   },
   "contact": {
-    "title": "Contact"
+    "title": "Contact",
+    "instagram": "Instagram",
+    "phone": "Téléphone",
+    "email": "Email",
+    "instagramUrl": "https://www.instagram.com/collectifp4/",
+    "arthur": "Arthur Viadieu: 06 99 90 04 74",
+    "bob": "Bob Levasseur: 07 69 18 94 49",
+    "mail": "associationp4@gmail.com"
   },
   "actions": {
     "enter": "Entrer",

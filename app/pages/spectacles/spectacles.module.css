@@ -60,3 +60,25 @@
 .selected {
   text-decoration: underline;
 }
+
+@media screen and (max-width: 768px) {
+  .main {
+    padding-top: 60px;
+    /* flex-direction: column-reverse; */
+  }
+
+  .left-section {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .main {
+    flex-direction: column-reverse;
+  }
+
+  .left-section {
+    width: 100%;
+    padding-left: 20px;
+  }
+}
