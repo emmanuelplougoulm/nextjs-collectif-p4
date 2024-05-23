@@ -47,6 +47,10 @@
   left: 0;
 }
 
+.selected {
+  font-weight: bold;
+}
+
 @media screen and (max-width: 1024px) {
   .nav {
     font-size: 12px;
