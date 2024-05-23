@@ -40,7 +40,7 @@ export default function Landing() {
           </Container>
         </section>
         <section className={styles["bottom-section"]}>
-          <div className={styles["copyright"]}>{text.landing.copyright}</div>
+          <div className={styles["copyright"]}>{text.landing.copywrite}</div>
           <Image src={Circle} width={15} height={15} alt="triangle_icon" />
         </section>
       </main>

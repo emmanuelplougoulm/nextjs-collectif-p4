@@ -5,7 +5,7 @@
     "collectiveCities": ["Paris", "St-Étienne", "Marseille"]
   },
   "landing": {
-    "copyright": "@2024 - Collectif P4"
+    "copywrite": "@2024 - Collectif P4"
   },
   "manifeste": {
     "title": "Manifeste",
