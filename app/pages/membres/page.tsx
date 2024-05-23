@@ -9,6 +9,7 @@ import List from "@/app/components/shared/list/list";
 import Title from "@/app/components/shared/title/title";
 import Container from "@/app/components/shared/container/container";
 
+import initialImage from "@/public/images/masks.jpg";
 import text from "@/locales/fr/all.json";
 
 type Membre = {
@@ -19,11 +20,13 @@ type Membre = {
 };
 
 export default function Membres() {
+  const [isFirstClick, setFirstClick] = useState<Boolean>(false);
   const [current, setCurrent] = useState<Membre>(config[0]);
 
   // make it a custom hook
   const handleOnclick = (item: Membre) => {
     setCurrent(item);
+    setFirstClick(true);
   };
 
   const BASE_LOAD_URL = `/assets/webp/members/`;
@@ -45,29 +48,42 @@ export default function Membres() {
               ))}
             </List>
 
-            <Container className={styles["infos-container"]}>
-              <List className={styles["roles-list"]}>
-                {current?.position?.map((item, index) => (
-                  <li key={index}>{item}</li>
-                ))}
-              </List>
-              <List className={styles["cie-list"]}>
-                {current?.cie?.map((item, index) => (
-                  <li key={index}>{item}</li>
-                ))}
-              </List>
-            </Container>
+            {isFirstClick && (
+              <Container className={styles["infos-container"]}>
+                <List className={styles["roles-list"]}>
+                  {current?.position?.map((item, index) => (
+                    <li key={index}>{item}</li>
+                  ))}
+                </List>
+                <List className={styles["cie-list"]}>
+                  {current?.cie?.map((item, index) => (
+                    <li key={index}>{item}</li>
+                  ))}
+                </List>
+              </Container>
+            )}
           </Container>
         </section>
 
         <section className={styles["img-section"]}>
-          <Image
-            priority
-            fill
-            style={{ objectFit: "cover" }}
-            src={`${BASE_LOAD_URL}${current.imageName}`}
-            alt={current.name}
-          />
+          {!isFirstClick && (
+            <Image
+              priority
+              fill
+              style={{ objectFit: "cover" }}
+              src={initialImage}
+              alt={current.name}
+            />
+          )}
+          {isFirstClick && (
+            <Image
+              priority
+              fill
+              style={{ objectFit: "cover" }}
+              src={`${BASE_LOAD_URL}${current.imageName}`}
+              alt={current.name}
+            />
+          )}
         </section>
       </main>
     </DefaultLayout>
