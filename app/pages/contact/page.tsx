@@ -11,7 +11,7 @@ import text from "@/locales/fr/all.json";
 
 export default function Contact() {
   return (
-    <DefaultLayout>
+    <DefaultLayout title="Contact" description="Email, téléphone, instagram">
       <main className={styles["main"]}>
         <Container className={styles["title-container"]}>
           <Title tag="h3" className="section-title">

@@ -1,4 +1,3 @@
-"use client";
 import styles from "@/app/pages/actualites/news.module.css";
 import config from "@/app/pages/actualites/config";
 import pic from "@/public/assets/webp/laib-khaled.webp";
@@ -13,7 +12,7 @@ import text from "@/locales/fr/all.json";
 
 export default function news() {
   return (
-    <DefaultLayout>
+    <DefaultLayout title="Actualités" description="Actualités du collectif">
       <main className={styles["main"]}>
         <section className={styles["text-section"]}>
           <Title tag="h3" className="section-title">

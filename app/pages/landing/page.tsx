@@ -13,7 +13,11 @@ import text from "@/locales/fr/all.json";
 
 export default function Landing() {
   return (
-    <DefaultLayout>
+    <DefaultLayout
+      title="Collectif P4"
+      description="Collectif tout-terrain racontant des histoires avec un filtre
+    de poésie, d'humour, de rage et de folie"
+    >
       <main className={styles["main"]}>
         <section className={styles["top-section"]}>
           <Title tag="h2" className={styles["small-title"]}>

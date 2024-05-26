@@ -74,7 +74,10 @@ export default function Spectacles() {
   };
 
   return (
-    <DefaultLayout>
+    <DefaultLayout
+      title="Spectacles"
+      description="Descriptif des spectacles du collectif"
+    >
       <main className={styles["main"]}>
         <section className={styles["left-section"]}>
           <Container className={styles["section-title-container"]}>

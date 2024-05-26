@@ -11,7 +11,10 @@ import text from "@/locales/fr/all.json";
 
 export default function Manifeste() {
   return (
-    <DefaultLayout>
+    <DefaultLayout
+      title="Manifeste"
+      description="P4 c’est une quête de lumière, c’est croire en l'esprit de camaraderie c’est dedans et dehors, pour vous et pour nous"
+    >
       <main className={styles["main"]}>
         <section className={styles["content-section"]}>
           <Container className={styles["title-container"]}>

@@ -32,7 +32,10 @@ export default function Membres() {
   const BASE_LOAD_URL = `/assets/webp/members/`;
 
   return (
-    <DefaultLayout>
+    <DefaultLayout
+      title="Membres"
+      description="Page décrivant chacun des membres du collectif"
+    >
       <main className={styles["main"]}>
         <section className={styles["text-section"]}>
           <Title tag="h3" className={`${styles["title"]} section-title`}>

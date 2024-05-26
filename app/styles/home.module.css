@@ -1,6 +1,7 @@
 .main {
   height: 100vh;
   display: flex;
+  overflow: hidden;
 }
 
 .page-container {
@@ -84,10 +85,6 @@
   margin-left: 0.625rem;
   color: inherit;
   text-decoration: none;
-}
-
-.page-container a a:hover {
-  text-decoration: underline;
 }
 
 @media screen and (max-width: 768px) {
