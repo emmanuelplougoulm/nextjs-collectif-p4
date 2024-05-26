@@ -1,22 +1,47 @@
-import styles from "@/app/styles/home.module.css";
+import fs from "fs";
+import path from "path";
+import { GetStaticProps } from "next";
 
 import Image from "next/image";
 import Link from "next/link";
+import Head from "next/head";
 
+import styles from "@/app/styles/home.module.css";
 import friendsPic from "@/public/assets/webp/motoki.webp";
 import carPic from "@/public/assets/webp/remi.webp";
 
 import Title from "@/app/components/shared/title/title";
 import List from "@/app/components/shared/list/list";
 import Container from "@/app/components/shared/container/container";
-import Head from "next/head";
 
 import TriangleIcon from "@/app/components/icons/triangle.svg";
 import CircleIcon from "@/app/components/icons/circle.svg";
 
-import text from "@/locales/fr/all.json";
+type HomeProps = {
+  text: {
+    collectiveName: string;
+    home: {
+      collectiveQuote: string;
+      collectiveCities: string[];
+    };
+    actions: {
+      enter: string;
+    };
+  };
+};
 
-export default function Home() {
+export const getStaticProps: GetStaticProps<HomeProps> = async () => {
+  const filePath = path.join(process.cwd(), "locales", "fr", "all.json");
+  const text = JSON.parse(fs.readFileSync(filePath, "utf8"));
+
+  return {
+    props: {
+      text,
+    },
+  };
+};
+
+const Home: React.FC<HomeProps> = ({ text }) => {
   return (
     <>
       <Head>
@@ -109,4 +134,6 @@ export default function Home() {
       </main>
     </>
   );
-}
+};
+
+export default Home;
