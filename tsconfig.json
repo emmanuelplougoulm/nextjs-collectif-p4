@@ -26,7 +26,8 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "app/components/burger-menu/burger-menu.tsx"
+    "app/components/burger-menu/burger-menu.tsx",
+    "app/page.tsx"
   ],
   "exclude": ["node_modules"]
 }
