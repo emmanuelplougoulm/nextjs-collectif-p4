@@ -1,23 +1,27 @@
+import { Metadata } from "next";
 import Image from "next/image";
 
 import styles from "./landing.module.css";
 import DefaultLayout from "@/app/layouts/default-layout";
 import comediansPic from "@/public/images/landing.jpg";
 
-import Container from "../../components/shared/container/container";
-import Title from "../../components/shared/title/title";
-import Triangle from "../../components/icons/triangle.svg";
-import Circle from "../../components/icons/circle.svg";
+import Container from "@/app/components/shared/container/container";
+import Title from "@/app/components/shared/title/title";
+import Triangle from "@/app/components/icons/triangle.svg";
+import Circle from "@/app/components/icons/circle.svg";
 
 import text from "@/locales/fr/all.json";
 
+const { landing } = text;
+
+export const metadata: Metadata = {
+  title: landing.metadata.title,
+  description: landing.metadata.description,
+};
+
 export default function Landing() {
   return (
-    <DefaultLayout
-      title="Collectif P4"
-      description="Collectif tout-terrain racontant des histoires avec un filtre
-    de poésie, d'humour, de rage et de folie"
-    >
+    <DefaultLayout>
       <main className={styles["main"]}>
         <section className={styles["top-section"]}>
           <Title tag="h2" className={styles["small-title"]}>

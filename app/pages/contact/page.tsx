@@ -1,4 +1,4 @@
-"use client";
+import { Metadata } from "next";
 import styles from "@/app/pages/contact/contact.module.css";
 
 import Image from "next/image";
@@ -9,9 +9,16 @@ import Container from "@/app/components/shared/container/container";
 import Picture from "@/public/assets/webp/contact-2.webp";
 import text from "@/locales/fr/all.json";
 
+const { contact } = text;
+
+export const metadata: Metadata = {
+  title: contact.metadata.title,
+  description: contact.metadata.description,
+};
+
 export default function Contact() {
   return (
-    <DefaultLayout title="Contact" description="Email, téléphone, instagram">
+    <DefaultLayout>
       <main className={styles["main"]}>
         <Container className={styles["title-container"]}>
           <Title tag="h3" className="section-title">

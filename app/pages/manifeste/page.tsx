@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import styles from "@/app/pages/manifeste/manifeste.module.css";
 
 import DefaultLayout from "@/app/layouts/default-layout";
@@ -9,12 +10,16 @@ import TriangleIcon from "@/app/components/icons/triangle.svg";
 import manifestePic from "@/public/assets/webp/manifeste.webp";
 import text from "@/locales/fr/all.json";
 
+const { manifeste } = text;
+
+export const metadata: Metadata = {
+  title: manifeste.metadata.title,
+  description: manifeste.metadata.description,
+};
+
 export default function Manifeste() {
   return (
-    <DefaultLayout
-      title="Manifeste"
-      description="P4 c’est une quête de lumière, c’est croire en l'esprit de camaraderie c’est dedans et dehors, pour vous et pour nous"
-    >
+    <DefaultLayout>
       <main className={styles["main"]}>
         <section className={styles["content-section"]}>
           <Container className={styles["title-container"]}>

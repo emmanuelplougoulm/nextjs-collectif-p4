@@ -1,4 +1,6 @@
 "use client";
+import { Metadata } from "next";
+
 import styles from "@/app/pages/spectacles/spectacles.module.css";
 import config from "@/app/pages/spectacles/config";
 import { useState } from "react";
@@ -13,6 +15,13 @@ import ImageSlider from "@/app/components/image-slider/image-slider";
 import Button from "@/app/components/shared/button/button";
 
 import text from "@/locales/fr/all.json";
+
+// const { actualites } = text;
+
+// export const metadata: Metadata = {
+//   title: actualites.metadata.title,
+//   description: actualites.metadata.description,
+// };
 
 export default function Spectacles() {
   const [current, setCurrent] = useState<any>(config[0]);

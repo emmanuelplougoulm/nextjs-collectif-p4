@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import styles from "@/app/pages/actualites/news.module.css";
 import config from "@/app/pages/actualites/config";
 import pic from "@/public/assets/webp/laib-khaled.webp";
@@ -10,9 +11,16 @@ import News from "@/app/components/news/news";
 
 import text from "@/locales/fr/all.json";
 
+// const { actualites } = text;
+
+// export const metadata: Metadata = {
+//   title: actualites.metadata.title,
+//   description: actualites.metadata.description,
+// };
+
 export default function news() {
   return (
-    <DefaultLayout title="Actualités" description="Actualités du collectif">
+    <DefaultLayout>
       <main className={styles["main"]}>
         <section className={styles["text-section"]}>
           <Title tag="h3" className="section-title">

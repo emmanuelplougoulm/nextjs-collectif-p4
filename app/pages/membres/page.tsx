@@ -1,4 +1,5 @@
 "use client";
+// import { Metadata } from "next";
 import styles from "@/app/pages/membres/membres.module.css";
 import config from "@/app/pages/membres/config";
 import { useState } from "react";
@@ -18,6 +19,13 @@ type Membre = {
   cie: string[];
   imageName: string;
 };
+
+// const { manifeste } = text;
+
+// export const metadata: Metadata = {
+//   title: manifeste.metadata.title,
+//   description: manifeste.metadata.description,
+// };
 
 export default function Membres() {
   const [isFirstClick, setFirstClick] = useState<Boolean>(false);
