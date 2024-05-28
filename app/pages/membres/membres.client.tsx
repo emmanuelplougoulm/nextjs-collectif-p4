@@ -6,6 +6,7 @@ import { useState } from "react";
 import Image from "next/image";
 import DefaultLayout from "@/app/layouts/default-layout";
 import List from "@/app/components/shared/list/list";
+import ListItem from "@/app/components/shared/list-item/list-item";
 import Title from "@/app/components/shared/title/title";
 import Container from "@/app/components/shared/container/container";
 
@@ -42,9 +43,13 @@ export default function MembresClient() {
           <Container className={styles["lists-container"]}>
             <List tag="ul" className={styles["members"]}>
               {config.map((item) => (
-                <li onClick={() => handleOnclick(item)} key={item.name}>
+                <ListItem
+                  key={item.name}
+                  onClick={() => handleOnclick(item)}
+                  className={styles["place"]}
+                >
                   {item.name}
-                </li>
+                </ListItem>
               ))}
             </List>
 
@@ -52,12 +57,12 @@ export default function MembresClient() {
               <Container className={styles["infos-container"]}>
                 <List tag="ul" className={styles["roles-list"]}>
                   {current?.position?.map((item, index) => (
-                    <li key={index}>{item}</li>
+                    <ListItem key={index}>{item}</ListItem>
                   ))}
                 </List>
                 <List tag="ul" className={styles["cie-list"]}>
                   {current?.cie?.map((item, index) => (
-                    <li key={index}>{item}</li>
+                    <ListItem key={index}>{item}</ListItem>
                   ))}
                 </List>
               </Container>

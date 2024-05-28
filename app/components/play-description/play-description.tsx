@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./play-description.module.css";
 import List from "@/app/components/shared/list/list";
+import ListItem from "@/app/components/shared/list-item/list-item";
 
 type Spectacle = {
   name: string;
@@ -19,9 +20,9 @@ const PlayDescription: React.FC<Play> = ({ item }) => {
       <div className={styles["date-city"]}>{item.dateAndCity}</div>
       <List tag="ul">
         {item.place.map((item: any, index: any) => (
-          <div key={index} className={styles["place"]}>
+          <ListItem key={item} className={styles["place"]}>
             {item}
-          </div>
+          </ListItem>
         ))}
       </List>
 

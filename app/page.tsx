@@ -9,6 +9,7 @@ import carPic from "@/public/assets/webp/remi.webp";
 
 import Title from "@/app/components/shared/title/title";
 import List from "@/app/components/shared/list/list";
+import ListItem from "@/app/components/shared/list-item/list-item";
 import Container from "@/app/components/shared/container/container";
 
 import TriangleIcon from "@/app/components/icons/triangle.svg";
@@ -61,7 +62,7 @@ export default function Home() {
           <aside className={styles["top-item-container"]}>
             <List tag="ul">
               {text.home.collectiveCities.map((item) => (
-                <li key={item}>{item}</li>
+                <ListItem key={item}>{item}</ListItem>
               ))}
             </List>
           </aside>

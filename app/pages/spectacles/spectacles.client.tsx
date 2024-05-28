@@ -8,6 +8,7 @@ import Media from "@/app/components/media/media";
 import PlayDescription from "@/app/components/play-description/play-description";
 import DefaultLayout from "@/app/layouts/default-layout";
 import List from "@/app/components/shared/list/list";
+import ListItem from "@/app/components/shared/list-item/list-item";
 import Container from "@/app/components/shared/container/container";
 import Iframe from "@/app/components/shared/iframe/iframe";
 import ImageSlider from "@/app/components/image-slider/image-slider";
@@ -84,14 +85,13 @@ export default function SpectaclesClient() {
 
           <List tag="ul" className={styles["plays"]}>
             {config.map((item, index) => (
-              // make it a reusable component ListItem
-              <li
+              <ListItem
                 key={index}
                 className={current.name === item.name ? styles["selected"] : ""}
                 onClick={() => handleOnClick(item)}
               >
                 {item.name}
-              </li>
+              </ListItem>
             ))}
           </List>
 
