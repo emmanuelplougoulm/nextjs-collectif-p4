@@ -40,7 +40,7 @@ export default function MembresClient() {
           </Title>
 
           <Container className={styles["lists-container"]}>
-            <List className={styles["members"]}>
+            <List tag="ul" className={styles["members"]}>
               {config.map((item) => (
                 <li onClick={() => handleOnclick(item)} key={item.name}>
                   {item.name}
@@ -50,12 +50,12 @@ export default function MembresClient() {
 
             {isFirstClick && (
               <Container className={styles["infos-container"]}>
-                <List className={styles["roles-list"]}>
+                <List tag="ul" className={styles["roles-list"]}>
                   {current?.position?.map((item, index) => (
                     <li key={index}>{item}</li>
                   ))}
                 </List>
-                <List className={styles["cie-list"]}>
+                <List tag="ul" className={styles["cie-list"]}>
                   {current?.cie?.map((item, index) => (
                     <li key={index}>{item}</li>
                   ))}

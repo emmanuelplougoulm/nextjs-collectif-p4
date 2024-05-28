@@ -59,7 +59,7 @@ export default function Home() {
 
         <section>
           <aside className={styles["top-item-container"]}>
-            <List>
+            <List tag="ul">
               {text.home.collectiveCities.map((item) => (
                 <li key={item}>{item}</li>
               ))}

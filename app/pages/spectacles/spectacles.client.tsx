@@ -82,8 +82,9 @@ export default function SpectaclesClient() {
             <div className="section-title"> {text.spectacles.title}</div>
           </Container>
 
-          <List className={styles["plays"]}>
+          <List tag="ul" className={styles["plays"]}>
             {config.map((item, index) => (
+              // make it a reusable component ListItem
               <li
                 key={index}
                 className={current.name === item.name ? styles["selected"] : ""}

@@ -17,7 +17,7 @@ const PlayDescription: React.FC<Play> = ({ item }) => {
   return (
     <main className={styles["main"]}>
       <div className={styles["date-city"]}>{item.dateAndCity}</div>
-      <List>
+      <List tag="ul">
         {item.place.map((item: any, index: any) => (
           <div key={index} className={styles["place"]}>
             {item}
