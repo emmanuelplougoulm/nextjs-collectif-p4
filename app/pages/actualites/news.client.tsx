@@ -1,16 +1,15 @@
 import styles from "@/app/pages/actualites/news.module.css";
 import config from "@/app/pages/actualites/config";
+//todo
 import pic from "@/public/assets/webp/laib-khaled.webp";
 
 import Image from "next/image";
 import DefaultLayout from "@/app/layouts/default-layout";
-import Container from "@/app/components/shared/container/container";
-import Title from "@/app/components/shared/title/title";
-import News from "@/app/components/news/news";
+import { Title, Container, News } from "@/app/components/index";
 
 import text from "@/locales/fr/all.json";
 
-export default function newsClient() {
+export default function NewsClient() {
   return (
     <DefaultLayout>
       <main className={styles["main"]}>

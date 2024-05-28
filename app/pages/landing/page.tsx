@@ -5,10 +5,12 @@ import styles from "./landing.module.css";
 import DefaultLayout from "@/app/layouts/default-layout";
 import comediansPic from "@/public/images/landing.jpg";
 
-import Container from "@/app/components/shared/container/container";
-import Title from "@/app/components/shared/title/title";
-import Triangle from "@/app/components/icons/triangle.svg";
-import Circle from "@/app/components/icons/circle.svg";
+import {
+  Title,
+  Container,
+  TriangleIcon,
+  CircleIcon,
+} from "@/app/components/index";
 
 import text from "@/locales/fr/all.json";
 
@@ -28,7 +30,12 @@ export default function Landing() {
             Collectif tout-terrain racontant des histoires avec un filtre <br />
             de poésie, d&apos;humour, de rage et de folie.
           </Title>
-          <Image src={Triangle} width={15} height={15} alt="triangle-icon" />
+          <Image
+            src={TriangleIcon}
+            width={15}
+            height={15}
+            alt="triangle-icon"
+          />
         </section>
         <section className={styles["middle-section"]}>
           <Container className={styles["large-title-container"]}>
@@ -49,7 +56,7 @@ export default function Landing() {
         </section>
         <section className={styles["bottom-section"]}>
           <div className={styles["copyright"]}>{text.landing.copywrite}</div>
-          <Image src={Circle} width={15} height={15} alt="triangle_icon" />
+          <Image src={CircleIcon} width={15} height={15} alt="triangle_icon" />
         </section>
       </main>
     </DefaultLayout>

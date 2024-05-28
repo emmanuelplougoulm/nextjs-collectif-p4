@@ -1,3 +1,4 @@
+"useClient";
 import React, { useState } from "react";
 import "./image-slider.css";
 

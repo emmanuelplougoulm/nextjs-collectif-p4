@@ -9,6 +9,6 @@ export const metadata: Metadata = {
   description: news.metadata.description,
 };
 
-export default function newsServer() {
+export default function NewsServer() {
   return <NewsClient />;
 }

@@ -1,21 +1,25 @@
 "use client";
 
-import styles from "@/app/pages/spectacles/spectacles.module.css";
-import config from "@/app/pages/spectacles/config";
 import { useState } from "react";
-
-import Media from "@/app/components/media/media";
-import PlayDescription from "@/app/components/play-description/play-description";
-import DefaultLayout from "@/app/layouts/default-layout";
-import List from "@/app/components/shared/list/list";
-import ListItem from "@/app/components/shared/list-item/list-item";
-import Container from "@/app/components/shared/container/container";
-import Iframe from "@/app/components/shared/iframe/iframe";
-import ImageSlider from "@/app/components/image-slider/image-slider";
-import Button from "@/app/components/shared/button/button";
+import type { MediaType, SpectacleType } from "@/app/types/index";
 
 import text from "@/locales/fr/all.json";
-import type { MediaType, SpectacleType } from "@/app/types/index";
+import styles from "@/app/pages/spectacles/spectacles.module.css";
+import config from "@/app/pages/spectacles/config";
+
+import DefaultLayout from "@/app/layouts/default-layout";
+import ImageSlider from "@/app/components/image-slider/image-slider";
+
+import {
+  Title,
+  List,
+  ListItem,
+  Container,
+  Iframe,
+  Button,
+  PlayDescription,
+  Media,
+} from "@/app/components/index";
 
 export default function SpectaclesClient() {
   const [current, setCurrent] = useState<SpectacleType>(config[0]);
@@ -81,7 +85,9 @@ export default function SpectaclesClient() {
       <main className={styles["main"]}>
         <section className={styles["left-section"]}>
           <Container className={styles["section-title-container"]}>
-            <div className="section-title"> {text.spectacles.title}</div>
+            <Title tag="h2" className="section-title">
+              {text.spectacles.title}
+            </Title>
           </Container>
 
           <List tag="ul" className={styles["plays"]}>

@@ -5,10 +5,7 @@ import { useState } from "react";
 
 import Image from "next/image";
 import DefaultLayout from "@/app/layouts/default-layout";
-import List from "@/app/components/shared/list/list";
-import ListItem from "@/app/components/shared/list-item/list-item";
-import Title from "@/app/components/shared/title/title";
-import Container from "@/app/components/shared/container/container";
+import { Title, List, ListItem, Container } from "@/app/components/index";
 
 import initialImage from "@/public/images/masks.jpg";
 import text from "@/locales/fr/all.json";
