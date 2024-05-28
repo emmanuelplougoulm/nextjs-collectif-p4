@@ -31,7 +31,7 @@ export default function newsClient() {
             src={pic}
             style={{ objectFit: "cover" }}
             className={styles["shift-down"]}
-            alt="group of people photo"
+            alt="group_of_people_photo"
           />
         </section>
       </main>
