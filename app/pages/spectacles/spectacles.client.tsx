@@ -15,13 +15,14 @@ import ImageSlider from "@/app/components/image-slider/image-slider";
 import Button from "@/app/components/shared/button/button";
 
 import text from "@/locales/fr/all.json";
+import type { MediaType, SpectacleType } from "@/app/types/index";
 
 export default function SpectaclesClient() {
-  const [current, setCurrent] = useState<any>(config[0]);
+  const [current, setCurrent] = useState<SpectacleType>(config[0]);
   const [isFirstClicked, setFirstClic] = useState<boolean>(false);
   const [content, setContent] = useState<string>("photos");
 
-  const handleOnClick = (item: any) => {
+  const handleOnClick = (item: SpectacleType) => {
     setFirstClic(true);
     setCurrent(item);
     setContent("demo");
@@ -65,7 +66,7 @@ export default function SpectaclesClient() {
       case "media":
         return (
           <Container className={styles["media-container"]}>
-            {current.media.map((item: any, index: any) => (
+            {current?.media?.map((item: MediaType, index: number) => (
               <Media key={index} media={item} />
             ))}
           </Container>
@@ -98,7 +99,6 @@ export default function SpectaclesClient() {
           {isFirstClicked && (
             <>
               <PlayDescription item={current} />
-
               {renderContentButtons()}
             </>
           )}

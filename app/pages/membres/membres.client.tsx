@@ -13,7 +13,7 @@ import Container from "@/app/components/shared/container/container";
 import initialImage from "@/public/images/masks.jpg";
 import text from "@/locales/fr/all.json";
 
-type Membre = {
+type MembreType = {
   name: string;
   position: string[];
   cie: string[];
@@ -22,10 +22,10 @@ type Membre = {
 
 export default function MembresClient() {
   const [isFirstClick, setFirstClick] = useState<Boolean>(false);
-  const [current, setCurrent] = useState<Membre>(config[0]);
+  const [current, setCurrent] = useState<MembreType>(config[0]);
 
   // make it a custom hook
-  const handleOnclick = (item: Membre) => {
+  const handleOnclick = (item: MembreType) => {
     setCurrent(item);
     setFirstClick(true);
   };

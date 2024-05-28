@@ -1,14 +1,18 @@
 import React from "react";
 
-type ButtonProps = {
+type ButtonPropsType = {
   className?: string;
-  onClick: any;
+  onClick: Function;
   children: React.ReactNode;
 };
 
-const Button: React.FC<ButtonProps> = ({ className, onClick, children }) => {
+const Button: React.FC<ButtonPropsType> = ({
+  className,
+  onClick,
+  children,
+}) => {
   return (
-    <button className={className} onClick={onClick}>
+    <button className={className} onClick={() => onClick}>
       {children}
     </button>
   );

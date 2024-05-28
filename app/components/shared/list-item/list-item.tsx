@@ -1,13 +1,13 @@
 import React from "react";
 
-type ListItemProps = {
+type ListItemPropsType = {
   key: string | number;
   children: React.ReactNode;
   className?: string;
   onClick?: () => void;
 };
 
-const List: React.FC<ListItemProps> = ({
+const List: React.FC<ListItemPropsType> = ({
   children,
   className,
   key,

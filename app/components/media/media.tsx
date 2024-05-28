@@ -4,19 +4,14 @@ import styles from "./media.module.css";
 import Container from "@/app/components/shared/container/container";
 
 import Text from "@/locales/fr/all.json";
+import type { MediaType } from "@/app/types/index";
 
-type Media = {
-  text: string;
-  name: string;
-  webUrl?: string;
-};
-
-type MediaProps = {
-  media: Media;
+type MediaPropsType = {
+  media: MediaType;
   className?: string;
 };
 
-const Media: React.FC<MediaProps> = ({ media, className }) => {
+const Media: React.FC<MediaPropsType> = ({ media, className }) => {
   const displayLink = media.webUrl !== undefined;
 
   return (

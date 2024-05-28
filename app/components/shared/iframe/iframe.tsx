@@ -2,11 +2,11 @@ import React from "react";
 
 import styles from "./iframe.module.css";
 
-type IframeProps = {
+type IframePropsType = {
   demoUrl: string;
 };
 
-const Iframe: React.FC<IframeProps> = ({ demoUrl }) => {
+const Iframe: React.FC<IframePropsType> = ({ demoUrl }) => {
   return (
     <div className={styles["container"]}>
       <iframe

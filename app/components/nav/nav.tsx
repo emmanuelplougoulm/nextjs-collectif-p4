@@ -3,11 +3,11 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import styles from "./nav.module.css";
 
-type NavProps = {
+type NavPropsType = {
   className?: string;
 };
-const Nav: React.FC<NavProps> = ({ className }) => {
-  const [activePath, setActivePath] = useState("");
+const Nav: React.FC<NavPropsType> = ({ className }) => {
+  const [activePath, setActivePath] = useState<string>("");
 
   useEffect(() => {
     setActivePath(window.location.pathname);
