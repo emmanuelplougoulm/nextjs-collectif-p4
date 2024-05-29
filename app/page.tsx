@@ -1,17 +1,11 @@
 import fs from "fs";
 import path from "path";
-import { GetStaticProps } from "next";
-
-import text from "@/locales/fr/all.json";
-import styles from "@/app/styles/home.module.css";
 import { Metadata } from "next";
-
 import Image from "next/image";
 import Link from "next/link";
-
+import styles from "@/app/styles/home.module.css";
 import friendsPic from "@/public/images/home/motoki.webp";
 import carPic from "@/public/images/home/remi.webp";
-
 import {
   Title,
   List,
@@ -34,25 +28,20 @@ type HomeProps = {
   };
 };
 
-export const getStaticProps: GetStaticProps<HomeProps> = async () => {
+async function getData(): Promise<HomeProps["text"]> {
   const filePath = path.join(process.cwd(), "locales", "fr", "all.json");
-  const text = JSON.parse(fs.readFileSync(filePath, "utf8"));
-
-  return {
-    props: {
-      text,
-    },
-  };
-};
-
-const { home } = text;
+  const data = JSON.parse(fs.readFileSync(filePath, "utf8"));
+  return data;
+}
 
 export const metadata: Metadata = {
-  title: home.metadata.title,
-  description: home.metadata.description,
+  title: "Homepage du site du collectif p4",
+  description:
+    "COLLECTIF P4, collectif joyeusement foutraque, Paris, Marseille, Saint-Étienne",
 };
 
-const Home: React.FC<HomeProps> = ({ text }) => {
+const Home: React.FC<HomeProps> = async () => {
+  const text = await getData();
   return (
     <main className={styles.main}>
       <Container className={styles["page-container"]}>
