@@ -1,3 +1,8 @@
+import fs from "fs";
+import path from "path";
+import { GetStaticProps } from "next";
+
+import text from "@/locales/fr/all.json";
 import styles from "@/app/styles/home.module.css";
 import { Metadata } from "next";
 
@@ -16,7 +21,29 @@ import {
   CircleIcon,
 } from "@/app/components/index";
 
-import text from "@/locales/fr/all.json";
+type HomeProps = {
+  text: {
+    collectiveName: string;
+    home: {
+      collectiveQuote: string;
+      collectiveCities: string[];
+    };
+    actions: {
+      enter: string;
+    };
+  };
+};
+
+export const getStaticProps: GetStaticProps<HomeProps> = async () => {
+  const filePath = path.join(process.cwd(), "locales", "fr", "all.json");
+  const text = JSON.parse(fs.readFileSync(filePath, "utf8"));
+
+  return {
+    props: {
+      text,
+    },
+  };
+};
 
 const { home } = text;
 
@@ -25,7 +52,7 @@ export const metadata: Metadata = {
   description: home.metadata.description,
 };
 
-export default function Home() {
+const Home: React.FC<HomeProps> = ({ text }) => {
   return (
     <main className={styles.main}>
       <Container className={styles["page-container"]}>
@@ -102,4 +129,6 @@ export default function Home() {
       </Container>
     </main>
   );
-}
+};
+
+export default Home;

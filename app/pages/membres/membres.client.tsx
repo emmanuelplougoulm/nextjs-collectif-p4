@@ -7,7 +7,7 @@ import Image from "next/image";
 import DefaultLayout from "@/app/layouts/default-layout";
 import { Title, List, ListItem, Container } from "@/app/components/index";
 
-import initialImage from "@/public/images/masks.jpg";
+import initialImage from "@/public/images/guili.jpg";
 import text from "@/locales/fr/all.json";
 
 type MembreType = {
