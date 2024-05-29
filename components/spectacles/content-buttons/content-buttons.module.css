@@ -1,0 +1,22 @@
+.buttons-container {
+  display: flex;
+  padding: 1rem 0;
+  justify-content: flex-start;
+}
+
+.content-btn {
+  all: unset;
+
+  border-radius: 4px;
+  background: black;
+  color: white;
+
+  cursor: pointer;
+  padding: 0.4rem;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+}
+
+.buttons-container :not(:first-child) {
+  margin-left: 20px;
+}
