@@ -27,7 +27,7 @@ export default function MembresClient() {
     setFirstClick(true);
   };
 
-  const BASE_LOAD_URL = `/assets/webp/members/`;
+  const BASE_LOAD_URL = `/images/membres/`;
 
   return (
     <DefaultLayout>

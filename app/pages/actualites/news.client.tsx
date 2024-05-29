@@ -1,13 +1,12 @@
 import styles from "@/app/pages/actualites/news.module.css";
 import config from "@/app/pages/actualites/config";
-//todo
-import pic from "@/public/assets/webp/laib-khaled.webp";
+import pic from "@/public/images/news/laib-khaled.webp";
+import text from "@/locales/fr/all.json";
 
 import Image from "next/image";
 import DefaultLayout from "@/app/layouts/default-layout";
 import { Title, Container, News } from "@/app/components/index";
 
-import text from "@/locales/fr/all.json";
 
 export default function NewsClient() {
   return (

@@ -1,12 +1,11 @@
 import { Metadata } from "next";
 import styles from "@/app/pages/contact/contact.module.css";
+import text from "@/locales/fr/all.json";
+import picture from "@/public/images/contact/contact.webp";
 
 import Image from "next/image";
 import DefaultLayout from "@/app/layouts/default-layout";
 import { Title, Container } from "@/app/components/index";
-// TODO
-import Picture from "@/public/assets/webp/contact-2.webp";
-import text from "@/locales/fr/all.json";
 
 const { contact } = text;
 
@@ -34,7 +33,7 @@ export default function Contact() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Lien
+              Visiter
             </a>
           </div>
           <div>
@@ -55,7 +54,7 @@ export default function Contact() {
           <Image
             fill
             style={{ objectFit: "contain" }}
-            src={Picture}
+            src={picture}
             alt="sea_photo"
           />
         </Container>

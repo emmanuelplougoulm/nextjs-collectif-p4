@@ -4,9 +4,8 @@ import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
-// todo modify this
-import friendsPic from "@/public/assets/webp/motoki.webp";
-import carPic from "@/public/assets/webp/remi.webp";
+import friendsPic from "@/public/images/home/motoki.webp";
+import carPic from "@/public/images/home/remi.webp";
 
 import {
   Title,

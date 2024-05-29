@@ -5,8 +5,7 @@ import DefaultLayout from "@/app/layouts/default-layout";
 import Image from "next/image";
 import { Title, Container, TriangleIcon } from "@/app/components/index";
 
-// TODO
-import manifestePic from "@/public/assets/webp/manifeste.webp";
+import manifestePic from "@/public/images/manifeste/manifeste.webp";
 import text from "@/locales/fr/all.json";
 
 const { manifeste } = text;
