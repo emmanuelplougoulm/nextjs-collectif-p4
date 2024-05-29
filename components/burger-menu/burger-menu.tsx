@@ -19,10 +19,10 @@ const BurgerMenu: React.FC = () => {
       </div>
       <nav className={`${styles.menu} ${open ? styles.open : ""}`}>
         <Link href="/manifeste">Manifeste</Link>
-        <Link href="//membres">Membres</Link>
-        <Link href="//actualites">Actualités</Link>
-        <Link href="//spectacles">Spectacles</Link>
-        <Link href="//contact">Contact</Link>
+        <Link href="/membres">Membres</Link>
+        <Link href="/actualites">Actualités</Link>
+        <Link href="/spectacles">Spectacles</Link>
+        <Link href="/contact">Contact</Link>
       </nav>
     </>
   );
