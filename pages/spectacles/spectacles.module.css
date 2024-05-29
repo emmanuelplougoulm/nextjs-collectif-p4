@@ -2,44 +2,25 @@
   display: flex;
   flex: 1;
   overflow: hidden;
+  /* background-color: red; */
 }
 
 .left-section {
-  width: 440px;
+  width: 450px;
   padding-left: var(--left-gutter);
 }
 
 .right-section {
-  width: calc(100vw - 440px);
+  /* width: calc(100vw - 500px); */
   display: flex;
+  flex: 1;
   padding-top: var(--section-title-top-spacing);
+  position: relative;
+  /* border: 1px blue solid; */
 }
 
 .section-title-container {
   margin-top: var(--section-title-top-spacing);
-}
-
-.buttons-container {
-  display: flex;
-  padding: 1rem 0;
-  justify-content: flex-start;
-}
-
-.content-btn {
-  all: unset;
-
-  border-radius: 4px;
-  background: black;
-  color: white;
-
-  cursor: pointer;
-  padding: 0.4rem;
-  font-family: "Inter", sans-serif;
-  font-size: 12px;
-}
-
-.buttons-container :not(:first-child) {
-  margin-left: 20px;
 }
 
 .plays {

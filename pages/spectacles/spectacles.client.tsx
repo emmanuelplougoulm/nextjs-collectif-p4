@@ -1,25 +1,23 @@
 "use client";
 
-import { useState } from "react";
+import {
+  Container,
+  ContentButtons,
+  Iframe,
+  List,
+  ListItem,
+  Media,
+  PlayDescription,
+  Title,
+} from "@/components/index";
 import type { MediaType, SpectacleType } from "@/types/index";
-
-import text from "@/locales/fr/all.json";
-import styles from "@/pages/spectacles/spectacles.module.css";
-import config from "@/config/spectacles.config";
 
 import DefaultLayout from "@/layouts/default-layout";
 import ImageSlider from "@/components/image-slider/image-slider";
-
-import {
-  Title,
-  List,
-  ListItem,
-  Container,
-  Iframe,
-  Button,
-  PlayDescription,
-  Media,
-} from "@/components/index";
+import config from "@/config/spectacles.config";
+import styles from "@/pages/spectacles/spectacles.module.css";
+import text from "@/locales/fr/all.json";
+import { useState } from "react";
 
 export default function SpectaclesClient() {
   const [current, setCurrent] = useState<SpectacleType>(config[0]);
@@ -32,36 +30,7 @@ export default function SpectaclesClient() {
     setContent("demo");
   };
 
-  const renderContentButtons = () => (
-    <Container className={styles["buttons-container"]}>
-      {current.demoUrl && (
-        <Button
-          className={styles["content-btn"]}
-          onClick={() => setContent("demo")}
-        >
-          Demo
-        </Button>
-      )}
-      {current.images.length > 0 && (
-        <Button
-          className={styles["content-btn"]}
-          onClick={() => setContent("photos")}
-        >
-          Images
-        </Button>
-      )}
-      {current.media && (
-        <Button
-          className={styles["content-btn"]}
-          onClick={() => setContent("media")}
-        >
-          Media
-        </Button>
-      )}
-    </Container>
-  );
-
-  const renderContent = () => {
+  const renderContent = (current: any) => {
     switch (content) {
       case "demo":
         return current.demoUrl && <Iframe demoUrl={current.demoUrl} />;
@@ -105,12 +74,14 @@ export default function SpectaclesClient() {
           {isFirstClicked && (
             <>
               <PlayDescription item={current} />
-              {renderContentButtons()}
+              <ContentButtons onClick={setContent} current={current} />
             </>
           )}
         </section>
 
-        <section className={styles["right-section"]}>{renderContent()}</section>
+        <section className={styles["right-section"]}>
+          {/* {renderContent(current)} */}
+        </section>
       </main>
     </DefaultLayout>
   );
