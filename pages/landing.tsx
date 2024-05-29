@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import Image from "next/image";
 
-import styles from "./landing.module.css";
+import styles from "@/styles/landing.module.css";
 import DefaultLayout from "@/layouts/default-layout";
 import comediansPic from "@/public/images/landing.jpg";
 
