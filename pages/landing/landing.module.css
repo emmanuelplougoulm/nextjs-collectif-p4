@@ -1,0 +1,143 @@
+.main {
+  border: 1px red solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  padding-top: 6.25rem;
+}
+
+.top-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 9.375rem;
+}
+
+.top-section img {
+  transform: rotate(90deg);
+  margin-top: 1rem;
+}
+
+.middle-section {
+  display: flex;
+  height: 18.75rem;
+  padding-left: var(--left-gutter);
+}
+
+.large-title-container {
+  display: flex;
+  align-items: center;
+  flex: 1.5;
+}
+
+.img-container {
+  position: relative;
+  width: 40%;
+}
+
+.bottom-section {
+  height: 4.0625rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* FONT STYLES */
+
+.large-title {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  line-height: 5rem;
+  font-size: 4.375rem;
+  text-transform: uppercase;
+}
+
+.small-title {
+  font-family: "Source Serif 4", serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  font-style: italic;
+  text-align: center;
+}
+
+.copyright {
+  font-family: "Source Serif 4", serif;
+  position: absolute;
+  left: var(--left-gutter);
+}
+
+@media screen and (max-width: 768px) {
+  .main {
+    margin-left: 0;
+  }
+
+  .middle-section {
+    flex-direction: column-reverse;
+    padding-left: 0;
+  }
+
+  .img-container {
+    width: 100%;
+  }
+
+  .large-title-container {
+    text-align: center;
+  }
+
+  .bottom-section {
+    justify-content: center;
+  }
+
+  .bottom-section img {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .main {
+    justify-content: center;
+    padding: 1rem;
+  }
+
+  .large-title-container {
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+  }
+
+  .large-title {
+    font-size: 1.5625rem;
+    line-height: 1.5625rem;
+    text-align: center;
+  }
+
+  .small-title {
+    font-size: 0.875rem;
+  }
+
+  .middle-section {
+    flex-direction: column-reverse;
+  }
+
+  .img-container {
+    position: relative;
+    width: 100%;
+    flex: 2;
+  }
+
+  .bottom-section {
+    justify-content: center;
+    padding-left: 0;
+  }
+
+  .bottom-section img {
+    display: none;
+  }
+
+  .copyright {
+    display: none;
+  }
+}
