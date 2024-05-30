@@ -26,6 +26,7 @@ const Landing: React.FC = () => {
             de poésie, d&apos;humour, de rage et de folie.
           </Title>
           <Image
+            priority
             src={TriangleIcon}
             width={15}
             height={15}
@@ -42,6 +43,7 @@ const Landing: React.FC = () => {
           <Container className={styles["img-container"]}>
             <Image
               fill
+              priority
               src={comediansPic}
               style={{ objectFit: "cover" }}
               className={styles["shift-down"]}
@@ -51,7 +53,13 @@ const Landing: React.FC = () => {
         </section>
         <section className={styles["bottom-section"]}>
           <div className={styles["copyright"]}>{text.landing.copywrite}</div>
-          <Image src={CircleIcon} width={15} height={15} alt="triangle_icon" />
+          <Image
+            priority
+            src={CircleIcon}
+            width={15}
+            height={15}
+            alt="triangle_icon"
+          />
         </section>
       </main>
     </DefaultLayout>

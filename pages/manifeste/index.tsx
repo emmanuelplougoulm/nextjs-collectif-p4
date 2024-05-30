@@ -1,4 +1,6 @@
 import { Metadata } from "next";
+import React, { Suspense } from "react";
+
 import styles from "@/pages/manifeste/manifeste.module.css";
 
 import DefaultLayout from "@/layouts/default-layout";
@@ -25,6 +27,7 @@ export default function Manifeste() {
               {text.manifeste.title}
             </Title>
             <Image
+              priority
               src={TriangleIcon}
               width={15}
               height={15}
@@ -39,12 +42,16 @@ export default function Manifeste() {
         </section>
 
         <section className={styles["img-section"]}>
-          <Image
-            src={manifestePic}
-            fill
-            style={{ objectFit: "cover" }}
-            alt="lightbeams_trees"
-          />
+          <Suspense fallback={<div>Loading...</div>}>
+            <Image
+              fill
+              priority
+              placeholder="blur"
+              src={manifestePic}
+              style={{ objectFit: "cover" }}
+              alt="lightbeams_trees"
+            />
+          </Suspense>
         </section>
       </main>
     </DefaultLayout>

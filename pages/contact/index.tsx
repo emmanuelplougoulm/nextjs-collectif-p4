@@ -53,9 +53,10 @@ export default function Contact() {
         <Container className={styles["img-content"]}>
           <Image
             fill
+            priority
             style={{ objectFit: "contain" }}
             src={picture}
-            alt="sea_photo"
+            alt="members_pointing_at_contacts"
           />
         </Container>
       </main>

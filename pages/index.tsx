@@ -41,6 +41,7 @@ export default function Home() {
         <section>
           <span className={styles["top-item-container"]}>
             <Image
+              priority
               className={styles["top-triangle"]}
               src={TriangleIcon}
               width={15}
@@ -55,7 +56,13 @@ export default function Home() {
             <Title tag="h2">{text.home.collectiveQuote}</Title>
           </div>
           <span>
-            <Image src={CircleIcon} width={15} height={15} alt="circle_icon" />
+            <Image
+              priority
+              src={CircleIcon}
+              width={15}
+              height={15}
+              alt="circle_icon"
+            />
           </span>
         </section>
 
