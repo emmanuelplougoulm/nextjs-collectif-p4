@@ -1,24 +1,38 @@
 .slider {
   display: flex;
   flex-direction: column;
-  flex: 1;
+  height: 100%;
   margin: 0;
-  overflow: hidden;
+  position: relative;
 }
 
 .slider-content {
   display: block;
   width: 100%;
+  height: 100%;
+  position: relative;
 }
 
 .nav-content {
   display: flex;
   align-items: center;
+  height: 30px;
+  justify-content: space-between;
+}
+
+.left-arrow,
+.right-arrow {
+  all: unset;
+  width: 0.9375rem;
+  height: 0.9375rem;
+  border: none;
+  color: black;
+  cursor: pointer;
 }
 
 .slider-image {
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 
 .slider-image img {
@@ -26,41 +40,27 @@
   height: auto;
 }
 
-.left-arrow,
-.right-arrow {
-  background-color: white;
-  border: none;
-  color: black;
-  cursor: pointer;
-  z-index: 1;
-}
-
-.nav-content {
-  height: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.nav-disable {
-  visibility: hidden;
-}
-
 .dots {
-  text-align: center;
+  height: 1.875rem;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 0.625rem;
 }
 
 .dot {
   cursor: pointer;
-  height: 8px;
-  width: 8px;
-  margin: 0 5px;
-  background-color: #bbb;
+  height: 0.5rem;
+  width: 0.5rem;
+  margin: 0 0.3125rem;
+  background-color: black;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.3s ease;
 }
 
 .dot.active {
-  background-color: black;
+  background-color: red;
 }

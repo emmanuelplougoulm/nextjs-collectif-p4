@@ -1,6 +1,7 @@
 "useClient";
+import Image from "next/image";
 import React, { useState } from "react";
-import "./image-slider.module.css";
+import styles from "./image-slider.module.css";
 
 interface ImageSliderProps {
   images: string[];
@@ -24,39 +25,42 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images }) => {
   const displayArrows = images.length > 1 ? true : false;
 
   return (
-    <div className="slider">
+    <div className={styles["slider"]}>
       {displayArrows && (
-        <div className="nav-content">
-          <div>
-            <button onClick={goToPrevious} className="left-arrow">
+        <div className={styles["nav-content"]}>
+          <div className={styles["arrows"]}>
+            <button onClick={goToPrevious} className={styles["left-arrow"]}>
               ❮
             </button>
-            <button onClick={goToNext} className="right-arrow">
+            <button onClick={goToNext} className={styles["right-arrow"]}>
               ❯
             </button>
           </div>
 
-          <div className="dots">
+          <div className={styles["dots"]}>
             {images.map((_, idx) => (
-              <span
+              <div
                 key={idx}
-                className={currentIndex === idx ? "dot active" : "dot"}
+                className={
+                  currentIndex === idx
+                    ? styles["dot"] + " " + styles["active"]
+                    : styles["dot"]
+                }
                 onClick={() => setCurrentIndex(idx)}
-              ></span>
+              ></div>
             ))}
           </div>
         </div>
       )}
-      <div className="slider-content">
-        <div className="slider-image">
-          <img src={images[currentIndex]} alt="slider" />
-          {/* <Image
+      <div className={styles["slider-content"]}>
+        <div className={styles["slider-image"]}>
+          <Image
             priority
             fill
             src={images[currentIndex]}
             style={{ objectFit: "cover" }}
             alt="slider"
-          /> */}
+          />
         </div>
       </div>
     </div>
