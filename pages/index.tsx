@@ -1,3 +1,4 @@
+import React from "react";
 import styles from "@/styles/home.module.css";
 import { Metadata } from "next";
 
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
   description: home.metadata.description,
 };
 
-export default function Home() {
+const Home: React.FC = () => {
   return (
     <main className={styles.main}>
       <Container className={styles["page-container"]}>
@@ -109,4 +110,6 @@ export default function Home() {
       </Container>
     </main>
   );
-}
+};
+
+export default Home;

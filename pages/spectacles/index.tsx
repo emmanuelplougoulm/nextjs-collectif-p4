@@ -10,6 +10,8 @@ export const metadata: Metadata = {
   description: spectacles.metadata.description,
 };
 
-export default function spectaclesServer() {
+const SpectaclesServer: React.FC = () => {
   return <SpectaclesClient />;
-}
+};
+
+export default SpectaclesServer;

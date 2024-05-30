@@ -16,13 +16,13 @@ import styles from "@/pages/spectacles/spectacles.module.css";
 import text from "@/locales/fr/all.json";
 import { useState } from "react";
 
-export default function SpectaclesClient() {
+const SpectaclesClient: React.FC = () => {
   const [current, setCurrent] = useState<SpectacleType>(config[0]);
-  const [isFirstClicked, setFirstClic] = useState<boolean>(false);
+  const [isFirstClicked, setFirstClick] = useState<boolean>(false);
   const [content, setContent] = useState<string>("photos");
 
   const handleOnClick = (item: SpectacleType) => {
-    setFirstClic(true);
+    setFirstClick(true);
     setCurrent(item);
     setContent("demo");
   };
@@ -63,4 +63,6 @@ export default function SpectaclesClient() {
       </main>
     </DefaultLayout>
   );
-}
+};
+
+export default SpectaclesClient;

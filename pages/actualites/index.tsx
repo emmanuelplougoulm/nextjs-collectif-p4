@@ -9,6 +9,8 @@ export const metadata: Metadata = {
   description: news.metadata.description,
 };
 
-export default function NewsServer() {
+const NewsServer: React.FC = () => {
   return <NewsClient />;
-}
+};
+
+export default NewsServer;

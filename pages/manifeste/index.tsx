@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   description: manifeste.metadata.description,
 };
 
-export default function Manifeste() {
+const Manifeste: React.FC = () => {
   return (
     <DefaultLayout>
       <main className={styles["main"]}>
@@ -56,4 +56,6 @@ export default function Manifeste() {
       </main>
     </DefaultLayout>
   );
-}
+};
+
+export default Manifeste;

@@ -9,6 +9,8 @@ export const metadata: Metadata = {
   description: membres.metadata.description,
 };
 
-export default function Membres() {
+const Membres: React.FC = () => {
   return <MembresClient />;
-}
+};
+
+export default Membres;

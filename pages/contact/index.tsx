@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   description: contact.metadata.description,
 };
 
-export default function Contact() {
+const Contact: React.FC = () => {
   return (
     <DefaultLayout>
       <main className={styles["main"]}>
@@ -62,4 +62,6 @@ export default function Contact() {
       </main>
     </DefaultLayout>
   );
-}
+};
+
+export default Contact;

@@ -7,7 +7,7 @@ import Image from "next/image";
 import DefaultLayout from "@/layouts/default-layout";
 import { Title, Container, News } from "@/components/index";
 
-export default function NewsClient() {
+const NewsClient: React.FC = () => {
   return (
     <DefaultLayout>
       <main className={styles["main"]}>
@@ -34,4 +34,6 @@ export default function NewsClient() {
       </main>
     </DefaultLayout>
   );
-}
+};
+
+export default NewsClient;

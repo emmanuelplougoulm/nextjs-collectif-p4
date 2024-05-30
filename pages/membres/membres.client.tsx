@@ -16,12 +16,10 @@ type MembreType = {
   cie: string[];
   imageName: string;
 };
-
-export default function MembresClient() {
+const MembresClient: React.FC = () => {
   const [isFirstClick, setFirstClick] = useState<Boolean>(false);
   const [current, setCurrent] = useState<MembreType>(config[0]);
 
-  // make it a custom hook
   const handleOnclick = (item: MembreType) => {
     setCurrent(item);
     setFirstClick(true);
@@ -90,4 +88,6 @@ export default function MembresClient() {
       </main>
     </DefaultLayout>
   );
-}
+};
+
+export default MembresClient;
