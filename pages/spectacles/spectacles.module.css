@@ -2,21 +2,18 @@
   display: flex;
   flex: 1;
   overflow: hidden;
-  /* background-color: red; */
 }
 
 .left-section {
-  width: 450px;
+  width: 28.125rem;
   padding-left: var(--left-gutter);
 }
 
 .right-section {
-  /* width: calc(100vw - 500px); */
   display: flex;
   flex: 1;
-  padding-top: var(--section-title-top-spacing);
   position: relative;
-  /* border: 1px blue solid; */
+  padding-top: var(--section-title-top-spacing);
 }
 
 .section-title-container {
@@ -24,10 +21,10 @@
 }
 
 .plays {
-  margin-top: 40px;
+  margin-top: 2.5rem;
   font-family: "Source Serif 4", serif;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-style: italic;
   white-space: nowrap;
   cursor: pointer;
@@ -42,15 +39,15 @@
   text-decoration: underline;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 43.75rem) {
   .main {
     flex-direction: column;
     overflow: auto;
-    padding-top: 60px;
+    padding-top: 3.75rem;
   }
 
   .left-section {
-    padding-left: 20px;
+    padding-left: 1.25rem;
     width: 100%;
   }
 

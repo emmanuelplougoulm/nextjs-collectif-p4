@@ -1,19 +1,16 @@
 "use client";
-
 import {
   Container,
   ContentButtons,
-  Iframe,
+  ContentDisplay,
   List,
   ListItem,
-  Media,
   PlayDescription,
   Title,
 } from "@/components/index";
-import type { MediaType, SpectacleType } from "@/types/index";
+import type { SpectacleType } from "@/types/index";
 
 import DefaultLayout from "@/layouts/default-layout";
-import ImageSlider from "@/components/image-slider/image-slider";
 import config from "@/config/spectacles.config";
 import styles from "@/pages/spectacles/spectacles.module.css";
 import text from "@/locales/fr/all.json";
@@ -28,25 +25,6 @@ export default function SpectaclesClient() {
     setFirstClic(true);
     setCurrent(item);
     setContent("demo");
-  };
-
-  const renderContent = (current: any) => {
-    switch (content) {
-      case "demo":
-        return current.demoUrl && <Iframe demoUrl={current.demoUrl} />;
-      case "photos":
-        return <ImageSlider images={current.images} />;
-      case "media":
-        return (
-          <Container className={styles["media-container"]}>
-            {current?.media?.map((item: MediaType, index: number) => (
-              <Media key={index} media={item} />
-            ))}
-          </Container>
-        );
-      default:
-        return null;
-    }
   };
 
   return (
@@ -80,7 +58,7 @@ export default function SpectaclesClient() {
         </section>
 
         <section className={styles["right-section"]}>
-          {/* {renderContent(current)} */}
+          <ContentDisplay content={content} current={current} />
         </section>
       </main>
     </DefaultLayout>
