@@ -1,4 +1,4 @@
-import { Button, Container } from "@/components/index";
+import { Container } from "@/components/index";
 
 import React from "react";
 import type { SpectacleType } from "@/types/index";

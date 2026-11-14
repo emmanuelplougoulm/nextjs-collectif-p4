@@ -1,4 +1,3 @@
-"use client";
 import {
   Container,
   ContentButtons,
@@ -12,7 +11,7 @@ import type { SpectacleType } from "@/types/index";
 
 import DefaultLayout from "@/layouts/default-layout";
 import config from "@/config/spectacles.config";
-import styles from "@/pages/spectacles/spectacles.module.css";
+import styles from "./spectacles.module.css";
 import text from "@/locales/fr/all.json";
 import { useState } from "react";
 

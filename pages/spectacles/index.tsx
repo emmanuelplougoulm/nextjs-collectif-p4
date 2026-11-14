@@ -1,17 +1,17 @@
-import { Metadata } from "next";
-import SpectaclesClient from "./spectacles.client";
+import PageHead from "@/components/shared/page-head/page-head";
+import SpectaclesClient from "@/components/views/spectacles/spectacles-view";
 
 import text from "@/locales/fr/all.json";
 
 const { spectacles } = text;
 
-export const metadata: Metadata = {
-  title: spectacles.metadata.title,
-  description: spectacles.metadata.description,
-};
-
 const SpectaclesServer: React.FC = () => {
-  return <SpectaclesClient />;
+  return (
+    <>
+      <PageHead {...spectacles.metadata} />
+      <SpectaclesClient />
+    </>
+  );
 };
 
 export default SpectaclesServer;

@@ -1,16 +1,16 @@
-import { Metadata } from "next";
+import PageHead from "@/components/shared/page-head/page-head";
 import text from "@/locales/fr/all.json";
-import NewsClient from "./news.client";
+import NewsClient from "@/components/views/actualites/news-view";
 
 const { news } = text;
 
-export const metadata: Metadata = {
-  title: news.metadata.title,
-  description: news.metadata.description,
-};
-
 const NewsServer: React.FC = () => {
-  return <NewsClient />;
+  return (
+    <>
+      <PageHead {...news.metadata} />
+      <NewsClient />
+    </>
+  );
 };
 
 export default NewsServer;

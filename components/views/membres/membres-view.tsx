@@ -1,5 +1,4 @@
-"use client";
-import styles from "@/pages/membres/membres.module.css";
+import styles from "./membres.module.css";
 import config from "@/config/membres.config";
 import { useState } from "react";
 
@@ -17,7 +16,7 @@ type MembreType = {
   imageName: string;
 };
 const MembresClient: React.FC = () => {
-  const [isFirstClick, setFirstClick] = useState<Boolean>(false);
+  const [isFirstClick, setFirstClick] = useState<boolean>(false);
   const [current, setCurrent] = useState<MembreType>(config[0]);
 
   const handleOnclick = (item: MembreType) => {

@@ -1,4 +1,4 @@
-import styles from "@/pages/actualites/news.module.css";
+import styles from "./news.module.css";
 import config from "@/config/news.config";
 import pic from "@/public/images/news/laib-khaled.webp";
 import text from "@/locales/fr/all.json";

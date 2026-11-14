@@ -1,16 +1,16 @@
-import { Metadata } from "next";
+import PageHead from "@/components/shared/page-head/page-head";
 import text from "@/locales/fr/all.json";
-import MembresClient from "./membres.client";
+import MembresClient from "@/components/views/membres/membres-view";
 
 const { membres } = text;
 
-export const metadata: Metadata = {
-  title: membres.metadata.title,
-  description: membres.metadata.description,
-};
-
 const Membres: React.FC = () => {
-  return <MembresClient />;
+  return (
+    <>
+      <PageHead {...membres.metadata} />
+      <MembresClient />
+    </>
+  );
 };
 
 export default Membres;

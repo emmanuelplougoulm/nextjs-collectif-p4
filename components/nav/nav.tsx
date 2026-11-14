@@ -1,17 +1,13 @@
-"use client";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import styles from "./nav.module.css";
 
 type NavPropsType = {
   className?: string;
 };
 const Nav: React.FC<NavPropsType> = ({ className }) => {
-  const [activePath, setActivePath] = useState<string>("");
-
-  useEffect(() => {
-    setActivePath(window.location.pathname);
-  }, []);
+  const { pathname: activePath } = useRouter();
 
   const navItems = [
     {
